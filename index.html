@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Acryl platform</title>
+    <link rel="preconnect" href="https://stackpath.bootstrapcdn.com">
+    <link rel="preconnect" href="https://code.jquery.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="preload" href="fonts/TTNorms-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/TTNorms-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/TTNorms-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#000000">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="viewport" content="width=device-width, shrink-to-fit=no">-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">-->
+    <meta name="viewport" content="width=device-width, shrink-to-fit=yes">
+    <meta name="apple-mobile-web-app-title" content="Acryl">
+    <meta name="application-name" content="Acryl">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="icons/mstile-144x144.png">
+    <meta name="theme-color" content="#000000">
+    <meta name="Description" content="Acryl современная блокчейн платформа.">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css?v=12">
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-131883943-1', {'siteSpeedSampleRate': 100});
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+      ym(54685378, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+      });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/54685378" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!--FullStory-->
+    <script>
+      window['_fs_debug'] = false;
+      window['_fs_host'] = 'acrylplatform.com';
+      window['_fs_org'] = 'HKQ49';
+      window['_fs_namespace'] = 'FS';
+      (function(m,n,e,t,l,o,g,y){
+        if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+        g=m[e]=function(a,b,s){g.q?g.q.push([a,b,s]):g._api(a,b,s);};g.q=[];
+        o=n.createElement(t);o.async=1;o.src='s/fs.js';
+        y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+        g.identify=function(i,v,s){g(l,{uid:i},s);if(v)g(l,v,s)};g.setUserVars=function(v,s){g(l,v,s)};g.event=function(i,v,s){g('event',{n:i,p:v},s)};
+        g.shutdown=function(){g("rec",!1)};g.restart=function(){g("rec",!0)};
+        g.consent=function(a){g("consent",!arguments.length||a)};
+        g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+        g.clearUserCookie=function(){};
+      })(window,document,window['_fs_namespace'],'script','user');
+    </script>
+    <!--End FullStory-->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "https://acrylplatform.com/",
+        "logo": "https://acrylplatform.com/img/acryl.jpeg",
+        "brand":"Acryl",
+        "name": "Acryl platform"
+      }
+    </script>
+  </head>
+  <body>
+
+    <header class="header">
+     <div class="container small-content">
+       <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#"><img src="img/acryl-logo-white.svg" alt="Acryl logo text"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><img src="img/menu.svg" alt="menu image"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#platform">Платформа</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#miner">Майнинг</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#client">Клиент</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+     </div>
+    </header>
+
+    <main class="main">
+     <div class="first-banner-wrp">
+      <picture>
+        <source type="image/webp" srcset="img/top-5120.webp">
+        <img src="img/top-2560.jpg" alt="Acryl top image">
+      </picture>
+      <div class="container small-content">
+        <div class="row" style="margin-top:45px;">
+          <div class="col-lg-7 first-banner-content">
+            <h2 class="second-level-title">Advanced <br>crypto logic *</h2>
+            <span class="title-descript">*Передовая Крипто Логика</span>
+            <span class="title-info">Блокчейн в массы через понятные решения</span>
+            <div class="text">Блокчейн-платформа для выпуска цифровых активов и управления ими, которая объединяет передовые технологии крипто-сферы в понятных для каждого инструментах.</div>
+            <ul class="three-buttons-list">
+              <li><a id="maining" class="basic-button red">Майнинг</a></li>
+              <li><a id="onlineclient" class="basic-button orange">Онлайн клиент</a></li>
+              <li><a id="explorer" class="basic-button red">Обозреватель блоков</a></li>
+              <!--<li>-->
+                <!--<a id="downloads" class="download">-->
+                  <!--Скачать клиент-->
+                  <!--<img src="img/download.svg" alt="Acryl download icon">-->
+                <!--</a>-->
+              <!--</li>-->
+            </ul>
+          </div>
+        </div>
+      </div>
+     </div>
+     <div class="about-us-wrp" id="platform">
+       <div class="container">
+        <div class="row black-blocks">
+          <div class="col-lg-6">
+           <div class="item-of-black-block">
+             <span class="block-title">Децентрализованная сеть, учитывающая ошибки предшественников</span>
+             <div class="text">Распространенные блокчейн-платформы имеют ряд недостатков, среди которых - недостаточная степень децентрализации. В свою очередь, ACRYL совмещает передовой принцип <span class="orange">LPOS (Leasing Proof of Stake)</span> и легкость использования майнеров. <br><br>Это обеспечивает реальную децентрализацию, где участники сети - не только крипто-энтузиасты, но и достаточно далекие от сферы люди. </div>
+           </div>
+         </div>
+         <div class="col-lg-6">
+           <div class="item-of-black-block orange">
+            <img src="img/black-block-bg.svg" alt="Acryl black block" class="block-bg">
+             <span class="block-title">Широкий функционал платформы</span>
+             <div class="text">Все передовые технологии "в одном флаконе": мгновенные транзакции, удобный клиент, децентрализованная биржа, цветные монеты, интеграция расширений и пр.</div>
+           </div>
+         </div>
+        </div>
+        <div class="row about-miner" id="miner">
+          <div class="col-lg-6">
+            <div class="item-of-miner">
+              <div class="image-block">
+                <img src="img/check-image.svg" alt="Acryl check image">
+              </div>
+              <span class="block-title">Проверка проектов перед<br> допуском к эмиссии</span>
+              <div class="text">ACRYL осуществляет пре-модерацию проектов перед их допуском на платформу. Только адекватные проекты, за которыми стоят реальные команды. Никаких финансовых пирамид, бесполезных токенов и прочих “мыльных пузырей”.</div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="item-of-miner">
+              <div class="image-block">
+                <img src="img/miner.svg" alt="Acryl miner image">
+              </div>
+              <span class="block-title orange">Принципиально новый<br> тип майнеров</span>
+              <div class="text">ACRYL NODE - фирменный майнер, физическое воплощение узла сети. Майнинг с ACRYL не требует больших вложений, мощностей и энергопотребления. ACRYL NODE легок в установке, а доходность - прозрачна и прогнозируема.</div>
+            </div>
+          </div>
+        </div>
+       </div>
+       <div class="container small-content">
+          <span class="decision-title">ACRYL - лучшее решение для:</span>
+         <div class="row best-decision">
+           <div class="col-lg-3 col-md-6">
+             <div class="item-of-decision">
+               <div class="image-block">
+                 <img src="img/bussines.svg" alt="Acryl bussines image">
+               </div>
+               <div class="text">Легкого внедрения блокчейн в свой бизнес</div>
+             </div>
+           </div>
+           <div class="col-lg-3 col-md-6">
+             <div class="item-of-decision">
+               <div class="image-block">
+                 <img src="img/data.svg" alt="Acryl data image">
+               </div>
+               <div class="text">Хранения информации в распределенной базе данных</div>
+             </div>
+           </div>
+           <div class="col-lg-3 col-md-6">
+             <div class="item-of-decision">
+               <div class="image-block">
+                 <img src="img/mining.svg" alt="Acryl mining image">
+               </div>
+               <div class="text">Легкого заработока на майнинге</div>
+             </div>
+           </div>
+           <div class="col-lg-3 col-md-6">
+             <div class="item-of-decision">
+               <div class="image-block">
+                 <img src="img/sale.svg" alt="Acryl sale image">
+               </div>
+               <div class="text">Организации краудсейл-кампаний</div>
+             </div>
+           </div>
+         </div>
+       </div>
+       <div class="container">
+         <div class="row about-us-list-wrp">
+             <ul class="about-us-list">
+               <li>
+                <div class="image-block">
+                  <img src="img/team.svg" alt="Acryl team image">
+                </div>
+                <div class="text"><strong>Команда ACRYL</strong> - крипто-энтузиасты, аккумулировавшие самые эффективные технологии и подходы индустрии на данный момент.</div>
+              </li>
+              <li>
+                <div class="image-block">
+                  <img src="img/new.svg" alt="Acryl new participants">
+                </div>
+                <div class="text">ACRYL  легко привлекает участников сети за счет легкого входа в майнинг, доступного и понятного даже для не-специалистов.</div>
+              </li>
+               <li>
+                <div class="image-block">
+                  <img src="img/nxt.svg" alt="Acryl nxt image">
+                </div>
+                <div class="text"><strong>Основа технологий</strong> - форк платформ NXT и  WAVES. </div>
+              </li>
+              <li>
+                <div class="image-block">
+                  <img src="img/motivation.svg" alt="Acryl motivation image">
+                </div>
+                <div class="text">ACRYL  обеспечивает высокую мотивацию для держателей нод за счет прогрессивной модели майнинга с прогнозируемой доходностью.</div>
+              </li>
+               <li>
+                <div class="image-block">
+                  <img src="img/ino.svg" alt="Acryl ino image">
+                </div>
+                <div class="text"><strong>Основа построения децентрализованной сети</strong> - модель первоначального распределения нод (узлов) в формате Initial Node Offering.</div>
+              </li>
+              <li>
+                <div class="image-block">
+                  <img src="img/tools.svg" alt="Acryl tools image">
+                </div>
+                <div class="text">ACRYL  дает легкий и удобный инструментарий для создания и управления цифровыми активами.</div>
+              </li>
+             </ul>
+         </div>
+       </div>
+       <div class="container small-content">
+        <div class="row slogan">
+         <div class="col-lg-7">
+           <span class="slogan-name">Advanced crypto logic</span>
+           <span class="slogan-body">Легко. <br>Удобно. <br>Эффективно.</span>
+         </div>
+        </div>
+       </div>
+     </div>
+     <div class="client-wrp" id="client">
+       <div class="container small-content">
+         <div class="row client-reverse-mobile">
+           <div class="col-lg-6 client-content">
+             <span class="client-title">ACRYL CLIENT</span>
+             <div class="text">Удобный доступ ко всем функциям платформы обеспечивает ACRYL CLIENT. Клиент доступен в форматах для настольных компьютеров и мобильных устройств. Все функции платформы Передовой Крипто Логики - в одном месте с интуитивно понятным интерфейсом.</div>
+             <ul class="client-list">
+               <li>Высокая степень децентрализации <span>(более 10000 нод в первый год работы)</span></li>
+               <li>Высокая скорость транзакций  <span>(позволяет запускать программы лояльности на блокчейн)</span></li>
+               <li>Внутренняя децентрализованная биржа (DEX)</li>
+               <li>Отсутствие комиссии платформы на ввод - вывод биткоина</li>
+               <li>Мультивалютность</li>
+               <li>Моментальные подтверждения транзакций</li>
+               <li>Возможность проведения краудфандинговых кампаний</li>
+               <li>Высокая безопастность</li>
+               <li>Высокая степень децентрализации</li>
+               <li>Выверенная стоимость транзакции</li>
+             </ul>
+             <ul class="two-buttons-list">
+              <!--<li><a id="downloadclient" class="basic-button red download"><span>Скачать клиент</span> <img src="img/download.svg" alt="Acryl download image"></a></li>-->
+              <li><a id="onlineclient2" class="basic-button orange">Онлайн клиент</a></li>
+            </ul>
+           </div>
+           <div class="col-lg-6">
+            <div class="client-screen">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/client.webp">
+                <img src="img/client.png" alt="Acryl client image">
+              </picture>
+            </div>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="node-wrp">
+      <picture>
+        <source type="image/webp" media="(min-width: 1200px)" srcset="img/noda.webp">
+          <img src="img/noda.jpg" alt="Acryl node image">
+        </picture>
+        <div class="container small-content">
+          <div class="row">
+            <div class="col-lg-12 node-mobile">
+              <picture>
+                <source type="image/webp" srcset="img/one-miner.webp">
+                <img src="img/one-miner.png" alt="Acryl miner image">
+              </picture>
+            </div>
+            <div class="col-lg-7 node-content">
+              <span class="node-title">ACRYL NODE</span>
+              <div class="text">ACRYL NODE - коробочное решение для майнинга. <br>То, чего не хватало крипто-индустрии. </div>
+              <span class="node-list-title">Всего несколько простых шагов:</span>
+              <ul class="node-list">
+                <li><span>1</span> - Покупка и установка устройства дома или в офисе.</li>
+                <li><span>2</span> - Подключение к сети, установка приложения и кошелька</li>
+                <li><span>3</span> - Ежедневное получение дохода.</li>
+              </ul>
+              <div class="text">Ежедневный доход, полученный от работы ACRYL NODE, можно<br> легко конвертировать в биткоин. Ликвидность монеты <br>обеспечивается на внутренней бирже платформы.</div>
+              <a id="aboutacrylnode" class="basic-button orange details">Подробнее о ACRYL NODE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="crypto-table-wrp">
+        <div class="container">
+          <div class="row">
+            <div class="table-wrapper">
+              <table class="comparison-table">
+                <tbody>
+                  <tr class="table-head">
+                    <td class="table-title" style="width: 35%;">Сравнение<br> с альтернативными<br> решениями</td>
+                    <td class="crypto-logo" style="width: 15%;">
+                      <img src="img/acryl.svg" alt="Acryl image">
+                      acryl
+                    </td>
+                    <td class="crypto-logo" style="width: 15%;">
+                      <img src="img/bitcoin.svg" alt="Bitcoin image">
+                      bitcoin
+                    </td>
+                    <td class="crypto-logo" style="width: 15%;">
+                      <img src="img/waves.svg" alt="Waves image">
+                      waves
+                    </td>
+                    <td class="crypto-logo" style="width: 15%;">
+                      <img src="img/ethereum.svg" alt="Ethereum image">
+                      ethereum
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 35%;">Алгоритм консенсуса </td>
+                    <td class="green" style="width: 15%;">POS</td>
+                    <td class="red" style="width: 15%;">POW</td>
+                    <td class="green" style="width: 15%;">POS</td>
+                    <td class="red" style="width: 15%;">POW ❯ POS</td>
+                  </tr>
+                  <tr>
+                    <td style="width: 35%;">Скорось транзакции</td>
+                    <td class="green" style="width: 15%;">5 сек</td>
+                    <td class="red" style="width: 15%;">28 мин</td>
+                    <td class="green" style="width: 15%;">5 сек</td>
+                    <td class="red" style="width: 15%;">7 мин</td>
+                  </tr>
+                  <tr>
+                    <td style="width: 35%;">Комиссия за транзакцию</td>
+                    <td class="green" style="width: 15%;">$ 0.001</td>
+                    <td class="red" style="width: 15%;">$ 0.1</td>
+                    <td class="green" style="width: 15%;">$ 0.001</td>
+                    <td class="red" style="width: 15%;">$ 0.08</td>
+                  </tr>
+                  <tr>
+                    <td style="width: 35%;">Количество узлов (нод)</td>
+                    <td class="green" style="width: 15%;">>15 000</td>
+                    <td class="green" style="width: 15%;">10 000</td>
+                    <td class="red" style="width: 15%;">350</td>
+                    <td class="green" style="width: 15%;">12 000</td>
+                  </tr>
+                  <tr>
+                    <td style="width: 35%;">Сложность входа в майнинг</td>
+                    <td class="green" style="width: 15%;">Очень легко</td>
+                    <td class="red" style="width: 15%;">Сложно</td>
+                    <td class="red" style="width: 15%;">Сложно</td>
+                    <td class="red" style="width: 15%;">Сложно</td>
+                  </tr>
+                  <tr>
+                    <td style="width: 35%;">Наличие простого клиента</td>
+                    <td class="green" style="width: 15%;">Есть</td>
+                    <td class="green" style="width: 15%;">Есть</td>
+                    <td class="green" style="width: 15%;">Есть</td>
+                    <td class="green" style="width: 15%;">Есть</td>
+                  </tr>
+                  <tr>
+                    <td style="width: 35%;">Возможность эмиссии своей монеты</td>
+                    <td class="green" style="width: 15%;">Да</td>
+                    <td class="red" style="width: 15%;">Нет</td>
+                    <td class="green" style="width: 15%;">Да</td>
+                    <td class="green" style="width: 15%;">Да</td>
+                  </tr>
+                  <tr>
+                    <td style="width: 35%;">Смарт контракты</td>
+                    <td class="green" style="width: 15%;">Да</td>
+                    <td class="red" style="width: 15%;">Нет</td>
+                    <td class="green" style="width: 15%;">Да</td>
+                    <td class="green" style="width: 15%;">Да</td>
+                  </tr>
+                  <tr>
+                    <td style="width: 35%;">Наличие DEX</td>
+                    <td class="green" style="width: 15%;">Да</td>
+                    <td class="red" style="width: 15%;">Нет</td>
+                    <td class="green" style="width: 15%;">Да</td>
+                    <td class="red" style="width: 15%;">Нет</td>
+                  </tr>
+                  <tr>
+                    <td style="width: 35%;">Энергозатраты на поддержание сети</td>
+                    <td class="green" style="width: 15%;">Низкие</td>
+                    <td class="red" style="width: 15%;">Высокие</td>
+                    <td class="green" style="width: 15%;">Низкие</td>
+                    <td class="red" style="width: 15%;">Высокие</td>
+                  </tr>
+                  <tr>
+                    <td style="width: 35%;">Влияние личности основателя </td>
+                    <td class="green" style="width: 15%;">Нет</td>
+                    <td class="green" style="width: 15%;">Нет</td>
+                    <td class="red" style="width: 15%;">Есть</td>
+                    <td class="red" style="width: 15%;">Есть</td>
+                  </tr>
+                  <tr>
+                    <td style="width: 35%;">Простота использования </td>
+                    <td class="green" style="width: 15%;">Очень просто</td>
+                    <td class="red" style="width: 15%;">Сложно</td>
+                    <td class="green" style="width: 15%;">Очень просто</td>
+                    <td class="red" style="width: 15%;">Сложно</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container small-content footer-content">
+        <div class="row subscribe-row">
+          <div class="col-md-6">
+            <span class="subscribe-title">Подпишитесь на нашу<br> новостную рассылку</span>
+          </div>
+          <div class="col-md-6 search-form-wrp">
+            <form>
+              <div class="search-row">
+                <input id="userEmail" type="text" aria-label="userEmail" placeholder="E-mail" name="email" required="required">
+                <button id="emailSubmit" type="button" class="basic-button red subscribe-button" >Подписаться</button>
+              </div>
+              <label class="check-after-subscribe">
+                <input id="emailCh1" type="checkbox" required="required" value="check1">
+                <span></span>
+                  <span>Я прочитал и согласен с <a href="privacy-policy.html" class="confidentiality">Политикой конфиденциальности</a><br> и <a href="cookies-policy.html" class="Politic">Политикой Cookies</a></span>
+              </label>
+              <label class="check-after-subscribe">
+                <input id="emailCh2" type="checkbox" required="required" value="check2">
+                <span></span>
+                  <span>Я согласен получать маркетинговую информацию и информационные бюллетени из <a>ACRYL</a>  по электронной почте</span>
+              </label>
+            </form>
+          </div>
+        </div>
+        <div class="row footer-nav-row">
+          <div class="col-lg-6 col-md-8">
+            <ul class="footer-nav">
+              <li>
+                <a href="" class="footer-logo">
+                  <img src="img/logo-orange.svg" alt="Acryl logo text">
+                </a>
+              </li>
+              <li><a href="#platform">Платформа</a></li>
+              <li><a href="#miner">Майнинг</a></li>
+              <li><a href="#client">Клиент</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-6 col-md-4">
+            <ul class="networks">
+                 <li><a id="youtube"><img src="img/youtube.svg" alt="Youtube Page"></a></li>
+                <li><a id="twitter"><img src="img/twitter.svg" alt="Twitter Page"></a></li>
+                <li><a id="telegram"><img src="img/telegram.svg" alt="Telegram Chanel"></a></li>
+                <li><a id="github"><img src="img/githubv3.svg" alt="Github Chanel"></a></li>
+                <li><a id="facebok"><img src="img/fb.svg" alt="Facebok Chanel"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <ul class="footer-politics">
+            <li>Copyright © 2018, ACRYL PLATFORM</li>
+            <li>Privacy policy.  Cookies policy.  Cookies settings <br>Terms and conditions</li>
+            <li><a id="weisswaters" class="weisswater"> Design by Weisswater</a>ebo</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
+    <script src="js/celdrusch.js?v=002"></script>
+    <script src="js/cookies-alert-core.js"></script>
+    <input name="cookieData" type="hidden" data-cookie-text="На данном веб-сайте используются файлы cookie. Продолжая просматривать наш веб-сайт, вы соглашаетесь с использованием файлов cookie и политикой конфиденциальности. Подробнее читать здесь <a href='cookies-policy.html'>Cookie policy</a> и <a href='privacy-policy.html'>Privacy policy</a>.">
+  </body>
+</html>
