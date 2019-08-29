@@ -26,7 +26,7 @@
                     <div class="client-screen">
                         <picture>
                             <source type="image/webp" media="(min-width: 1200px)" srcset="img/client.webp">
-                            <img src="img/client.png" alt="Acryl client image">
+                            <img src="img/client.webp" alt="Acryl client image">
                         </picture>
                     </div>
                 </div>
