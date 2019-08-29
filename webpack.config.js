@@ -1,10 +1,12 @@
 const { VueLoaderPlugin } = require('vue-loader')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
     mode: 'production',
     entry: {
-        app: './src/main.js'
+        app: './src/main.js',
+        style: './css/style.less'
     },
     output: {
         filename: '[name].[contenthash].js'
@@ -19,6 +21,19 @@ module.exports = {
             test: /\.vue$/,
             loader: 'vue-loader'
         },
+        {
+            test: /\.less$/,
+            use: [
+                MiniCssExtractPlugin.loader,
+                {
+                    loader: 'css-loader',
+                    options: { url: false }
+                },
+                {
+                    loader: 'less-loader',
+                }
+            ]
+        },
         ]
     },
     resolve: {
@@ -32,6 +47,9 @@ module.exports = {
             inject: false,
             filename: 'index.html',
             template: './src/template.html'
-        })
+        }),
+        new MiniCssExtractPlugin({
+            filename: 'style.[contenthash].css',
+          }),
     ]
 }
