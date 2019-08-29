@@ -7,7 +7,7 @@ import App from '../src/App.vue'
 
 new Vue({
     el: '#app',
-    template: '<App/>',
+    template: '<App v-on:switch-lang="switchLang"/>',
     i18n: {
         locale: 'en'
     },
@@ -15,6 +15,11 @@ new Vue({
     created: function () {
         if (navigator.language.includes('ru')) {
             this.$i18n.locale = 'ru'
+        }
+    },
+    methods: {
+        switchLang: function(lang) {
+            this.$i18n.locale = lang
         }
     }
 })

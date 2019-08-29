@@ -1,6 +1,6 @@
 <template>
     <div>
-        <headline></headline>
+        <headline v-on:switch-lang="switchLang"></headline>
         <main class="main">
             <banner></banner>
             <about></about>
@@ -37,6 +37,11 @@
         i18n: {
             messages: {},
             sharedMessages: locale
+        },
+        methods: {
+            switchLang: function(lang) {
+                this.$emit('switch-lang', lang)
+            }
         }
     }
 </script>

@@ -18,6 +18,10 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#client">{{ $t('links.client') }}</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" @click="$emit('switch-lang', 'en')" v-if="this.$i18n.locale == 'ru'">English</a>
+                            <a class="nav-link" href="#" @click="$emit('switch-lang', 'ru')" v-else>Russian</a>
+                        </li>
                     </ul>
                 </div>
             </nav>
