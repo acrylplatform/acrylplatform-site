@@ -1,8 +1,8 @@
 <template>
     <div class="node-wrp">
         <picture>
-            <source type="image/webp" media="(min-width: 1200px)" srcset="img/noda.webp">
-            <img src="img/noda.webp" alt="Acryl node image">
+            <source type="image/webp" srcset="img/noda.webp">
+            <img src="img/noda.jpg" alt="Acryl node image">
         </picture>
         <div class="container small-content">
             <div class="row">
