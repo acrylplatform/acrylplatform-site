@@ -7,6 +7,9 @@ branches:
 script:
   - npm install
   - npm run build
+before_deploy:
+  - rm -rf node_modules/
+  - rm -rf src/
 deploy:
   provider: s3
   access_key_id: $AWS_ACCESS_KEY_ID
