@@ -8,9 +8,11 @@ script:
   - npm install
   - npm run build
 deploy:
-  provider: pages
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: "acrylplatform.com"
   skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  keep_history: true
+  region: eu-central-1
   on:
     branch: dev
