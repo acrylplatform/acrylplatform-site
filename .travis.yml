@@ -3,7 +3,7 @@ node_js:
   - "10"
 branches:
   only:
-  - master
+  - dev
 script:
   - npm install
   - npm run build
@@ -13,4 +13,4 @@ deploy:
   github_token: $GITHUB_TOKEN
   keep_history: true
   on:
-    branch: master
+    branch: dev
