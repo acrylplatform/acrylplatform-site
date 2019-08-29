@@ -1,0 +1,42 @@
+<template>
+    <div>
+        <headline></headline>
+        <main class="main">
+            <banner></banner>
+            <about></about>
+            <client></client>
+            <node></node>
+            <crypto></crypto>
+        </main>
+        <footline></footline>
+        <input name="cookieData" type="hidden" :data-cookie-text="$t('cookie.text', { lnk1: `<a href='cookies-policy.html'>Cookie policy</a>`, lnk2: `<a href='privacy-policy.html'>Privacy policy</a>`})">
+    </div>
+</template>
+
+<script>
+    import headline from '../src/Header.vue'
+    import banner from '../src/Banner.vue'
+    import about from '../src/About.vue'
+    import client from '../src/Client.vue'
+    import node from '../src/Node.vue'
+    import crypto from '../src/Crypto.vue'
+    import footline from '../src/Footer.vue'
+
+    import locale from '../src/locale.js'
+    
+    export default{
+        components: {
+            headline,
+            banner,
+            about,
+            client,
+            node,
+            crypto,
+            footline
+        },
+        i18n: {
+            messages: {},
+            sharedMessages: locale
+        }
+    }
+</script>
