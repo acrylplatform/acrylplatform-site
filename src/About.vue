@@ -81,7 +81,7 @@
                         <div class="image-block">
                             <img src="img/team.svg" alt="Acryl team image">
                         </div>
-                        <div class="text"><strong>{{ $t('about.list.acrylTeam') }}</strong>{{ $t('about.list.acrylTeamText') }}</div>
+                        <div class="text"><strong>{{ $t('about.list.acrylTeam') }}</strong> {{ $t('about.list.acrylTeamText') }}</div>
                     </li>
                     <li>
                         <div class="image-block">
@@ -105,7 +105,7 @@
                         <div class="image-block">
                             <img src="img/ino.svg" alt="Acryl ino image">
                         </div>
-                        <div class="text"><strong>{{ $t('about.list.inoTitle') }}</strong>{{ $t('about.list.inoText') }}</div>
+                        <div class="text"><strong>{{ $t('about.list.inoTitle') }}</strong> {{ $t('about.list.inoText') }}</div>
                     </li>
                     <li>
                         <div class="image-block">
