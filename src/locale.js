@@ -109,6 +109,11 @@ export default {
             low: 'Низкие',
             high: 'Высокие'
         },
+        exchange: {
+            exchanget: 'Биржи:',
+            stex: 'STEX',
+            coingecko: 'COINGECKO'
+        },
         footer: {
             subscribeTitle1: 'Подпишитесь на нашу',
             subscribeTitle2: 'новостную рассылку',
@@ -233,6 +238,11 @@ export default {
             simply: 'Very simply',
             low: 'Low',
             high: 'High'
+        },
+        exchange: {
+            exchanget: 'Exchange:',
+            stex: 'STEX',
+            coingecko: 'COINGECKO'
         },
         footer: {
             subscribeTitle1: 'Subscribe to our',
