@@ -1,3 +1,4 @@
+<template>
  <div class="container">
             <div class="row about-us-list-wrp">
                 <ul class="about-us-list">
@@ -20,3 +21,15 @@
                 </ul>
             </div>
         </div>
+</template>
+
+<script>
+    import locale from '../src/locale.js'
+    
+    export default{
+        i18n: {
+            messages: {},
+            sharedMessages: locale
+        }
+    }
+</script>
