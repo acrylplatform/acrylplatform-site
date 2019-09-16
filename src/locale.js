@@ -110,9 +110,7 @@ export default {
             high: 'Высокие'
         },
         exchange: {
-            exchanget: 'Биржи:',
-            stex: 'STEX',
-            coingecko: 'COINGECKO'
+            exchangetitle: 'Обменники и Аналитические Сервисы:',
         },
         footer: {
             subscribeTitle1: 'Подпишитесь на нашу',
@@ -240,9 +238,7 @@ export default {
             high: 'High'
         },
         exchange: {
-            exchanget: 'Exchange:',
-            stex: 'STEX',
-            coingecko: 'COINGECKO'
+            exchangetitle: 'Exchangers and Analytic Services:',
         },
         footer: {
             subscribeTitle1: 'Subscribe to our',
