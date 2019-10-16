@@ -4,6 +4,7 @@ export default {
             platform: 'Платформа',
             miner: 'Майнинг',
             client: 'Клиент',
+            blog: 'Блог',
             onlineclient: 'Онлайн клиент',
             explorer: 'Обозреватель блоков',
             downloads: 'Скачать клиент',
@@ -109,6 +110,9 @@ export default {
             low: 'Низкие',
             high: 'Высокие'
         },
+        exchange: {
+            exchangetitle: 'Обменники и Аналитические Сервисы:',
+        },
         footer: {
             subscribeTitle1: 'Подпишитесь на нашу',
             subscribeTitle2: 'новостную рассылку',
@@ -129,6 +133,7 @@ export default {
             platform: 'Platform',
             miner: 'Mining',
             client: 'Client',
+            blog: 'Blog',
             onlineclient: 'Online Client',
             explorer: 'Explorer',
             downloads: 'Download client',
@@ -233,6 +238,9 @@ export default {
             simply: 'Very simply',
             low: 'Low',
             high: 'High'
+        },
+        exchange: {
+            exchangetitle: 'Exchangers and Analytic Services:',
         },
         footer: {
             subscribeTitle1: 'Subscribe to our',
