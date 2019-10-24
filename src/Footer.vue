@@ -39,11 +39,12 @@
                 </div>
                 <div class="col-lg-6 col-md-4">
                     <ul class="networks">
-                        <li><a id="youtube"><img src="img/youtube.svg" alt="Youtube Page"></a></li>
-                        <li><a id="twitter"><img src="img/twitter.svg" alt="Twitter Page"></a></li>
-                        <li><a id="telegram"><img src="img/telegram.svg" alt="Telegram Chanel"></a></li>
-                        <li><a id="github"><img src="img/githubv3.svg" alt="Github Chanel"></a></li>
-                        <li><a id="facebok"><img src="img/fb.svg" alt="Facebok Chanel"></a></li>
+                        <li><a class="networkspad" id="youtube"><img src="img/youtube.svg" alt="Youtube Page"></a></li>
+                        <li><a class="networkspad" id="twitter"><img src="img/twitter.svg" alt="Twitter Page"></a></li>
+                        <li><a class="networkspad" id="telegram"><img src="img/telegram.svg" alt="Telegram Chanel"></a></li>
+                        <li><a class="networkspad" id="github"><img src="img/githubv3.svg" alt="Github Chanel"></a></li>
+                        <li><a class="networkspad" id="facebok"><img src="img/fb.svg" alt="Facebok Chanel"></a></li>
+                        <li><a class="networkspad" id="vk"><img src="img/vklogo.png" alt="Vk Chanel"></a></li>
                     </ul>
                 </div>
             </div>
