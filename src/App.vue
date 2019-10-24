@@ -7,7 +7,6 @@
             <client></client>
             <node></node>
             <crypto></crypto>
-            <exchange></exchange>
         </main>
         <footline></footline>
         <input name="cookieData" type="hidden" :data-cookie-text="$t('cookie.text', { lnk1: `<a href='cookies-policy.html'>Cookie policy</a>`, lnk2: `<a href='privacy-policy.html'>Privacy policy</a>`})">
@@ -21,7 +20,6 @@
     import client from '../src/Client.vue'
     import node from '../src/Node.vue'
     import crypto from '../src/Crypto.vue'
-    import exchange from '../src/Exchange.vue'
     import footline from '../src/Footer.vue'
 
     import locale from '../src/locale.js'
@@ -34,7 +32,6 @@
             client,
             node,
             crypto,
-            exchange,
             footline
         },
         i18n: {
