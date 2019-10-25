@@ -161,6 +161,9 @@
 		$("#telegram").click(function() {
 			window.open('https://t.me/Acrylplatform','_blank')
 		});
+		$("#vk").click(function() {
+			window.open('https://vk.com/acrylplatform','_blank')
+		});
 		$("#facebok").click(function() {
 			window.open('https://www.facebook.com/acrylplatformofficial','_blank')
 		});
