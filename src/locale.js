@@ -187,7 +187,7 @@ export default {
                 item1: 'High degree of decentralization',
                 item1span: '(more than 10,000 nodes in the first year of operation)',
                 item2: 'High transaction speed',
-                item2span: '(it allows to run loyalty programs щn blockchain)',
+                item2span: '(it allows to run loyalty programs on blockchain)',
                 item3: 'Internal decentralized exchange (DEX)',
                 item4: 'No platform commission for deposit and withdrawal of bitcoin',
                 item5: 'Multi-currency',
