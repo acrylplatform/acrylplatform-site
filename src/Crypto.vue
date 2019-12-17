@@ -47,7 +47,7 @@
                             </tr>
                             <tr>
                                 <td style="width: 35%;">{{ $t('crypto.node') }}</td>
-                                <td class="green" style="width: 15%;">>15 000</td>
+                                <td class="green" style="width: 15%;">>1 000</td>
                                 <td class="green" style="width: 15%;">10 000</td>
                                 <td class="red" style="width: 15%;">350</td>
                                 <td class="green" style="width: 15%;">12 000</td>

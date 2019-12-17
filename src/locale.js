@@ -58,7 +58,7 @@ export default {
             text: 'Удобный доступ ко всем функциям платформы обеспечивает ACRYL CLIENT. Клиент доступен в форматах для настольных компьютеров и мобильных устройств. Все функции платформы Передовой Крипто Логики - в одном месте с интуитивно понятным интерфейсом.',
             list: {
                 item1: 'Высокая степень децентрализации',
-                item1span: '(более 10000 нод в первый год работы)',
+                item1span: '(более 1000 нод в первый год работы)',
                 item2: 'Высокая скорость транзакций',
                 item2span: '(позволяет запускать программы лояльности на блокчейн)',
                 item3: 'Внутренняя децентрализованная биржа (DEX)',
@@ -187,7 +187,7 @@ export default {
             text: 'ACRYL CLIENT provides convenient access to all functions of the platform. The Client is available in desktop and mobile formats. All features of the Advanced Crypto Logic platform are in one place with an intuitive interface.',
             list: {
                 item1: 'High degree of decentralization',
-                item1span: '(more than 10,000 nodes in the first year of operation)',
+                item1span: '(more than 1,000 nodes in the first year of operation)',
                 item2: 'High transaction speed',
                 item2span: '(it allows to run loyalty programs on blockchain)',
                 item3: 'Internal decentralized exchange (DEX)',
