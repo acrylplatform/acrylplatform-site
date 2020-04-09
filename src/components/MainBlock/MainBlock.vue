@@ -23,15 +23,16 @@
                 max-width="450"
                 class="popup"
               >
-                <template v-slot:activator="{ on }">
+                <template #activator="{ on }">
                   <v-btn
                     class="contentBtn"
                     color="primaryColor"
                     dark
                     v-on="on"
                     @click="click_order()"
-                    >{{ btn }}</v-btn
                   >
+                    {{ btn }}
+                  </v-btn>
                 </template>
                 <v-container>
                   <v-row class="popup-block">
@@ -43,26 +44,29 @@
                           v-model="name"
                           label="Name"
                           full-width
-                        ></v-text-field>
+                        />
                         <v-text-field
                           dark
                           v-model="email"
                           label="E-mail"
                           full-width
-                        ></v-text-field>
+                        />
                         <v-text-field
                           dark
                           v-model="phone"
                           label="Phone"
                           full-width
-                        ></v-text-field>
-                        <v-checkbox dark v-model="agreeCheck">
-                          <template v-slot:label>
+                        />
+                        <v-checkbox
+                          dark
+                          v-model="agreeCheck"
+                        >
+                          <template #label>
                             <span
                               @click.stop
                               class="agreeCheckLabel"
                               v-html="agreeCheckLabel"
-                            ></span>
+                            />
                           </template>
                         </v-checkbox>
                         <div class="btn">
@@ -71,10 +75,14 @@
                             color="#FFFFFF primary"
                             light
                             @click="formSend()"
-                            >Связаться с нами</v-btn
                           >
+                            Связаться с нами
+                          </v-btn>
                         </div>
-                        <div class="modalOpen" v-if="modalTrue">
+                        <div
+                          class="modalOpen"
+                          v-if="modalTrue"
+                        >
                           <div class="modalCards">
                             <v-card
                               class="modalCard"
@@ -82,15 +90,25 @@
                               max-height="344"
                               outlined
                             >
-                              <p class="errorMessage" v-if="errorMessage">
+                              <p
+                                class="errorMessage"
+                                v-if="errorMessage"
+                              >
                                 {{ errorMessage }}
                               </p>
-                              <p class="response" v-if="response">
+                              <p
+                                class="response"
+                                v-if="response"
+                              >
                                 {{ response }}
                               </p>
-                              <v-btn rounded outlined @click="reversModal()"
-                                >Закрыть</v-btn
+                              <v-btn
+                                rounded
+                                outlined
+                                @click="reversModal()"
                               >
+                                Закрыть
+                              </v-btn>
                             </v-card>
                           </div>
                         </div>

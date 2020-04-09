@@ -1,8 +1,16 @@
 <template>
-  <section id="contacts" class="footer-block">
+  <section
+    id="contacts"
+    class="footer-block"
+  >
     <v-container class="Container mxw1200">
       <v-row>
-        <v-col cols="12" sm="6" lg="3" class="marwieght">
+        <v-col
+          cols="12"
+          sm="6"
+          lg="3"
+          class="marwieght"
+        >
           <h4>{{ head1 }}</h4>
           <div class="directions">
             <a
@@ -11,11 +19,16 @@
               :href="`${direction.link}`"
               target="_blank"
               @click="`${SubmitBTN(direction.click)}`"
-              ><img :src="`/img/directions/${direction.img}.svg`"
-            /></a>
+            ><img
+              :src="`/img/directions/${direction.img}.svg`"
+            ></a>
           </div>
         </v-col>
-        <v-col cols="12" sm="6" lg="3">
+        <v-col
+          cols="12"
+          sm="6"
+          lg="3"
+        >
           <h4>{{ head2 }}</h4>
           <div class="menu">
             <a
@@ -29,42 +42,47 @@
             </a>
           </div>
         </v-col>
-        <v-col cols="12" sm="6" lg="3">
+        <v-col
+          cols="12"
+          sm="6"
+          lg="3"
+        >
           <h4>{{ head3 }}</h4>
           <div class="address">
             <p>
-              <b
-                ><a
-                  :href="`tel:${addressItems.numberLink}`"
-                  @click="`${Submit_tel2()}`"
-                  >{{ addressItems.number }}</a
-                ></b
-              >
+              <b><a
+                :href="`tel:${addressItems.numberLink}`"
+                @click="`${Submit_tel2()}`"
+              >{{ addressItems.number }}</a></b>
             </p>
             <p>
-              <b
-                ><a
-                  :href="`mailto:${addressItems.email}`"
-                  @click="`${Submit_EmailLetter()}`"
-                  >{{ addressItems.email }}</a
-                ></b
-              >
+              <b><a
+                :href="`mailto:${addressItems.email}`"
+                @click="`${Submit_EmailLetter()}`"
+              >{{ addressItems.email }}</a></b>
             </p>
-            <p class="op07">{{ addressItems.city }}</p>
-            <p class="op07">{{ addressItems.address }}</p>
-            <p class="op07">{{ addressItems.support }}</p>
+            <p class="op07">
+              {{ addressItems.city }}
+            </p>
+            <p class="op07">
+              {{ addressItems.address }}
+            </p>
+            <p class="op07">
+              {{ addressItems.support }}
+            </p>
             <p>
-              <b
-                ><a
-                  :href="`mailto:${addressItems.emailsupport}`"
-                  @click="`${Submit_EmailLetter()}`"
-                  >{{ addressItems.emailsupport }}</a
-                ></b
-              >
+              <b><a
+                :href="`mailto:${addressItems.emailsupport}`"
+                @click="`${Submit_EmailLetter()}`"
+              >{{ addressItems.emailsupport }}</a></b>
             </p>
           </div>
         </v-col>
-        <v-col cols="12" sm="6" lg="3">
+        <v-col
+          cols="12"
+          sm="6"
+          lg="3"
+        >
           <h4>{{ head4 }}</h4>
           <div class="subscription">
             <v-text-field
@@ -72,14 +90,18 @@
               v-model="email"
               label="E-mail"
               required
-            ></v-text-field>
-            <v-checkbox dark v-model="agreeCheck" class="CheckBoxUp">
-              <template v-slot:label>
+            />
+            <v-checkbox
+              dark
+              v-model="agreeCheck"
+              class="CheckBoxUp"
+            >
+              <template #label>
                 <span
                   @click.stop
                   class="agreeCheckLabel"
                   v-html="agreeCheckLabel"
-                ></span>
+                />
               </template>
             </v-checkbox>
             <v-btn
@@ -88,26 +110,46 @@
               href="#targetSubscription"
               dark
               @click="formSubSend()"
-              >Подписаться</v-btn
             >
+              Подписаться
+            </v-btn>
           </div>
         </v-col>
       </v-row>
       <v-row class="bottomFooterBlock">
-        <v-col cols="12" sm="6" lg="3">
+        <v-col
+          cols="12"
+          sm="6"
+          lg="3"
+        >
           <div class="directions mweight">
-            <a href="#topTarget"
-              ><img src="/img/directions/acryl-logo-white.svg"
-            /></a>
+            <a
+              href="#topTarget"
+            ><img
+              src="/img/directions/acryl-logo-white.svg"
+            ></a>
           </div>
         </v-col>
-        <v-col cols="12" sm="6" lg="3">
+        <v-col
+          cols="12"
+          sm="6"
+          lg="3"
+        >
           <div class="polit">
-            <router-link to="/privacy">Privacy Policy</router-link>
-            <router-link to="/cookie">Cookie Policy</router-link>
+            <router-link to="/privacy">
+              Privacy Policy
+            </router-link>
+            <router-link to="/cookie">
+              Cookie Policy
+            </router-link>
           </div>
         </v-col>
-        <v-col cols="12" sm="6" lg="3" class="iconwieght">
+        <v-col
+          cols="12"
+          sm="6"
+          lg="3"
+          class="iconwieght"
+        >
           <div class="social">
             <a
               v-for="(item, i) in iconItems"
@@ -120,19 +162,29 @@
               <img
                 :src="`/img/social/icon_social_${item.icon}.svg`"
                 :alt="`${item.icon}`"
-              />
+              >
             </a>
           </div>
         </v-col>
-        <v-col cols="12" sm="6" lg="3">
+        <v-col
+          cols="12"
+          sm="6"
+          lg="3"
+        >
           <div class="copyright">
             <p>© 2020 - ACRYL RUS, LLC.</p>
             <div class="tooltip">
-              <v-tooltip top max-width="300" color="black">
-                <template v-slot:activator="{ on }">
-                  <span class="tooltipSpan" style="color: #2EA9FB;" v-on="on"
-                    >Все права защищены, 18+</span
-                  >
+              <v-tooltip
+                top
+                max-width="300"
+                color="black"
+              >
+                <template #activator="{ on }">
+                  <span
+                    class="tooltipSpan"
+                    style="color: #2EA9FB;"
+                    v-on="on"
+                  >Все права защищены, 18+</span>
                 </template>
                 <span>
                   Все материалы данного сайта являются объектами авторского
@@ -149,11 +201,25 @@
       </v-row>
     </v-container>
 
-    <div class="modalOpen" v-if="modalTrue">
+    <div
+      class="modalOpen"
+      v-if="modalTrue"
+    >
       <div class="modalCards">
-        <v-card class="modalCard" max-width="344" max-height="344" outlined>
+        <v-card
+          class="modalCard"
+          max-width="344"
+          max-height="344"
+          outlined
+        >
           <p>{{ textError }}</p>
-          <v-btn rounded outlined @click="reversModal()">Закрыть</v-btn>
+          <v-btn
+            rounded
+            outlined
+            @click="reversModal()"
+          >
+            Закрыть
+          </v-btn>
         </v-card>
       </div>
     </div>
@@ -162,9 +228,19 @@
 
 <script>
 import axios from "axios";
+
 export default {
   name: "FooterBlock",
-  props: ["footerItems", "addressItems"],
+  props: {
+    footerItems: {
+      type: Object,
+      default: null
+    },
+    addressItems: {
+      type: Object,
+      default: null
+    }
+  },
   computed: {
     getFooterItems() {
       return this.footerItems;

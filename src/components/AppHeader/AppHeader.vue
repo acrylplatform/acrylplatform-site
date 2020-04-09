@@ -1,18 +1,32 @@
 <template>
-  <v-app-bar app elevate-on-scroll short class="surface" pa-0>
-    <v-container h-100 pa-0 align-center d-flex>
+  <v-app-bar
+    app
+    elevate-on-scroll
+    short
+    class="surface"
+    pa-0
+  >
+    <v-container
+      h-100
+      pa-0
+      align-center
+      d-flex
+    >
       <div class="display1200 h-100">
         <v-toolbar-title>
           <div class="logotype">
-            <router-link to="/"
-              ><img
+            <router-link
+              to="/"
+            >
+              <img
                 class="vert-center widthMobil"
                 src="/img/Acryl-Logo.svg"
                 alt="acryl-logo"
-            /></router-link>
+              >
+            </router-link>
           </div>
         </v-toolbar-title>
-        <v-spacer></v-spacer>
+        <v-spacer />
         <div class="hidden-sm-and-down h-100">
           <v-toolbar-items>
             <div
@@ -26,16 +40,14 @@
                 :target="`${item.target}`"
                 rel="noreferrer noopener"
                 @click="`${SubmitBTN(item.click)}`"
-                >{{ item.text }}</a
-              >
+              >{{ item.text }}</a>
             </div>
             <div class="d-flex align-center pr-3">
               <a
                 href="tel:88005113715"
                 class="disPrimary elHover"
                 @click="Submit_tel1()"
-                >8 (800) 511-37-15</a
-              >
+              >8 (800) 511-37-15</a>
             </div>
           </v-toolbar-items>
         </div>
@@ -44,7 +56,7 @@
           @click.stop="handleDrawer"
           name="menuDrawer"
           aria-label="menuDrawer"
-        ></v-app-bar-nav-icon>
+        />
       </div>
     </v-container>
   </v-app-bar>
@@ -53,7 +65,12 @@
 <script>
 export default {
   name: "AppHeader",
-  props: ["menuItems"],
+  props: {
+    menuItems: {
+      type: Object,
+      default: null
+    }
+  },
   computed: {
     getmenuItems() {
       return this.menuItems;

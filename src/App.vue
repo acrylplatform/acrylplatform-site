@@ -15,19 +15,25 @@
             <v-list-item-content>
               <v-list-item-title class="title">
                 <div class="logotype">
-                  <router-link to="/"
-                    ><img
+                  <router-link
+                    to="/"
+                  >
+                    <img
                       class="vert-center widthMobil"
                       src="/img/Acryl-Logo.svg"
                       alt="acryl-logo"
-                  /></router-link>
+                    >
+                  </router-link>
                 </div>
               </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
-          <v-divider></v-divider>
+          <v-divider />
 
-          <div v-for="(item, i) in getmenuItems" :key="`drawerMenu${i}`">
+          <div
+            v-for="(item, i) in getmenuItems"
+            :key="`drawerMenu${i}`"
+          >
             <v-list-item>
               <v-list-item-content>
                 <v-list-item-title class="title">
@@ -36,31 +42,35 @@
                     class="elHover"
                     :target="`${item.target}`"
                     rel="noreferrer noopener"
-                    >{{ item.text }}</a
-                  >
+                  >{{ item.text }}</a>
                 </v-list-item-title>
               </v-list-item-content>
             </v-list-item>
-            <v-divider></v-divider>
+            <v-divider />
           </div>
           <div class="bottomBlock">
-            <v-divider></v-divider>
+            <v-divider />
             <v-list-item>
               <v-list-item-content>
                 <v-list-item-title class="title">
                   <a
                     :href="`tel:${addressItems.numberLink}`"
                     class="noDecoration secondaryColor"
-                    >{{ addressItems.number }}</a
-                  >
+                  >{{ addressItems.number }}</a>
                 </v-list-item-title>
               </v-list-item-content>
             </v-list-item>
-            <v-divider></v-divider>
+            <v-divider />
             <v-list-item>
               <v-list-item-content>
                 <v-list-item-title class="title">
-                  <v-btn rounded small href="#targetOffer">Заказать</v-btn>
+                  <v-btn
+                    rounded
+                    small
+                    href="#targetOffer"
+                  >
+                    Заказать
+                  </v-btn>
                 </v-list-item-title>
               </v-list-item-content>
             </v-list-item>
@@ -71,13 +81,16 @@
 
     <app-header
       :menu-items="menuItems"
-      v-on:changeDrawer="changeDrawerReverse"
+      @changeDrawer="changeDrawerReverse"
     />
 
     <!-- PAGES BLOCKS  -->
     <router-view />
 
-    <footer-block :footer-items="menuItems" :addressItems="addressItems" />
+    <footer-block
+      :footer-items="menuItems"
+      :address-items="addressItems"
+    />
   </v-app>
 </template>
 

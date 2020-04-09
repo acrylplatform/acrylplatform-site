@@ -1,6 +1,6 @@
 <template>
   <section class="form-block imgBlock">
-    <div id="targetOffer"></div>
+    <div id="targetOffer" />
     <v-container>
       <v-row class="height100">
         <v-col
@@ -9,7 +9,10 @@
           md="3"
           style="background-color: white; min-width: 364px; min-height: 456px; max-width: 355px; max-height: 528px; border-radius: 12px; margin-top: auto; margin-bottom: auto; margin-left: auto; margin-right: auto;"
         >
-          <h2 class="headSection pb-3 secondaryColor " align="center">
+          <h2
+            class="headSection pb-3 secondaryColor "
+            align="center"
+          >
             {{ headSection }}
           </h2>
           <div class="maxWidth">
@@ -18,26 +21,29 @@
               label="Имя"
               name="name"
               required
-            ></v-text-field>
+            />
             <v-text-field
               v-model="email"
               name="email"
               label="Электронная почта"
               required
-            ></v-text-field>
+            />
             <v-text-field
               v-model="phone"
               label="Телефон"
               name="phone"
               required
-            ></v-text-field>
-            <v-checkbox v-model="agreeCheck" class="CheckBoxUp">
-              <template v-slot:label>
+            />
+            <v-checkbox
+              v-model="agreeCheck"
+              class="CheckBoxUp"
+            >
+              <template #label>
                 <span
                   @click.stop
                   class="agreeCheckLabel"
                   v-html="agreeCheckLabel"
-                ></span>
+                />
               </template>
             </v-checkbox>
             <div class="d-flex align-center ">
@@ -46,19 +52,44 @@
                 block
                 href="#targetSend"
                 @click="formSend()"
-                >Отправить</v-btn
               >
+                Отправить
+              </v-btn>
             </div>
           </div>
         </v-col>
       </v-row>
     </v-container>
-    <div class="modalOpen" v-if="modalTrue">
+    <div
+      class="modalOpen"
+      v-if="modalTrue"
+    >
       <div class="modalCards">
-        <v-card class="modalCard" max-width="344" max-height="344" outlined>
-          <p class="errorMessage" v-if="errorMessage">{{ errorMessage }}</p>
-          <p class="response" v-if="response">{{ response }}</p>
-          <v-btn rounded outlined @click="reversModal()">Закрыть</v-btn>
+        <v-card
+          class="modalCard"
+          max-width="344"
+          max-height="344"
+          outlined
+        >
+          <p
+            class="errorMessage"
+            v-if="errorMessage"
+          >
+            {{ errorMessage }}
+          </p>
+          <p
+            class="response"
+            v-if="response"
+          >
+            {{ response }}
+          </p>
+          <v-btn
+            rounded
+            outlined
+            @click="reversModal()"
+          >
+            Закрыть
+          </v-btn>
         </v-card>
       </div>
     </div>
