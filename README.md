@@ -2,6 +2,7 @@
 
 ## Build
 
+
 The site uses Vue and is located in folder `src/`
 
 To build a site you need to run the command
