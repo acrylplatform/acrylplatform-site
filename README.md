@@ -1,20 +1,24 @@
-# AcrylPlatform
+# acrylplatform
 
-## Build
-
-
-The site uses Vue and is located in folder `src/`
-
-To build a site you need to run the command
-
-```sh
-npm run build
+## Project setup
+```
+yarn install
 ```
 
-`bundle.js` will be collected in a folder `dist/`
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
 
-`index.html` will be collected in a root
+### Compiles and minifies for production
+```
+yarn build
+```
 
-## Deploy
+### Lints and fixes files
+```
+yarn lint
+```
 
-Deploy is done automatically when pushing to the master
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
