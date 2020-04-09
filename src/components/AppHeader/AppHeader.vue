@@ -67,7 +67,7 @@ export default {
   name: "AppHeader",
   props: {
     menuItems: {
-      type: Object,
+      type: Array,
       default: null
     }
   },

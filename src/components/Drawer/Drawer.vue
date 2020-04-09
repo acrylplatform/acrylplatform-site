@@ -20,7 +20,12 @@
 <script>
 export default {
   name: "Drawer",
-  props: ["menuItems"],
+  props: {
+    menuItems: {
+      type: Array,
+      default: null
+    }
+  },
   computed: {
     getmenuItems() {
       return this.menuItems;

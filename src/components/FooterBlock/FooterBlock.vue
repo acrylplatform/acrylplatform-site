@@ -233,7 +233,7 @@ export default {
   name: "FooterBlock",
   props: {
     footerItems: {
-      type: Object,
+      type: Array,
       default: null
     },
     addressItems: {
