@@ -1,0 +1,321 @@
+
+.wrap{
+  height: auto !important;
+  height: 100%;
+  min-height: 100%;
+
+  padding-top: 1px;
+  width: auto;
+  max-width: 960px;
+  margin: 0px auto;
+  position: relative;
+}
+.slider{
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+  position: relative;
+  padding: 5px;
+  position: relative;
+}
+/*=============СЛАЙДЫ===================*/
+.img1{
+  position: relative;
+  max-width: 100%;
+  -webkit-transition-property:opacity, z-index;
+  -webkit-transition-duration:2s;
+  -moz-transition-property:opacity, z-index;
+  -moz-transition-duration:2s;
+  -o-transition-property:opacity, z-index;
+  -o-transition-duration:2s;
+  transition-property:opacity, z-index;
+  transition-duration:2s;
+  opacity: 1; /*не прозрачная только первая картинка*/
+  z-index: 1;
+  margin-top: 12px;
+}
+.img2, .img3, .img4, .img5{
+  position: absolute;
+  top: 40px;
+  left: 5px;
+  right: 5px;
+  -webkit-transition-property:opacity, z-index;
+  -webkit-transition-duration:2s;
+  -moz-transition-property:opacity, z-index;
+  -moz-transition-duration:2s;
+  -o-transition-property:opacity, z-index;
+  -o-transition-duration:2s;
+  transition-property:opacity, z-index;
+  transition-duration:2s;
+  opacity: 0;
+}
+
+img{
+  max-width: 100%;
+  vertical-align: middle;
+}
+/*============Анимация слайдов=======================*/
+.img1{
+  animation: imgAnim 30s linear infinite;
+  -webkit-animation: imgAnim 30s linear infinite;
+  -moz-animation: imgAnim 30s linear infinite;
+  -o-animation: imgAnim 30s linear infinite;
+}
+
+.img2{
+  animation: imgAnim 30s linear 6s infinite;
+  -webkit-animation: imgAnim 30s linear 6s infinite;
+  -moz-animation: imgAnim 30s linear 6s infinite;
+  -o-animation: imgAnim 30s linear 6s infinite;
+}
+.img3{
+  animation: imgAnim 30s linear 12s infinite;
+  -webkit-animation: imgAnim 30s linear 12s infinite;
+  -moz-animation: imgAnim 30s linear 12s infinite;
+  -o-animation: imgAnim 30s linear 12s infinite;
+}
+.img4{
+  animation: imgAnim 30s linear 18s infinite;
+  -webkit-animation: imgAnim 30s linear 18s infinite;
+  -moz-animation: imgAnim 30s linear 18s infinite;
+  -o-animation: imgAnim 30s linear 18s infinite;
+}
+.img5{
+  animation: imgAnim 30s linear 24s infinite;
+  -webkit-animation: imgAnim 30s linear 24s infinite;
+  -moz-animation: imgAnim 30s linear 24s infinite;
+  -o-animation: imgAnim 30s linear 24s infinite;
+}
+
+@keyframes imgAnim {
+  0% { opacity: 0; z-index: 5; }
+  8% { opacity: 1; z-index: 5; }
+  17% { opacity: 1; z-index: 5;}
+  25% { opacity: 0; z-index: 5; }
+  100% { opacity: 0; z-index: 5; }
+}
+@-webkit-keyframes imgAnim {
+  0% { opacity: 0; z-index: 5; }
+  8% { opacity: 1; z-index: 5; }
+  17% { opacity: 1; z-index: 5; }
+  25% { opacity: 0; z-index: 5; }
+  100% { opacity: 0; z-index: 5; }
+}
+@-o-keyframes imgAnim {
+  0% { opacity: 0; z-index: 5;}
+  8% { opacity: 1; z-index: 5;}
+  17% { opacity: 1; z-index: 5; }
+  25% { opacity: 0; z-index: 5; }
+  100% { opacity: 0 }
+}
+@-moz-keyframes imgAnim {
+  0% { opacity: 0; z-index: 5;}
+  8% { opacity: 1; z-index: 5;}
+  17% { opacity: 1; z-index: 5; }
+  25% { opacity: 0; z-index: 5; }
+  100% { opacity: 0; z-index: 5; }
+}
+
+/*=====ОПИСАНИЕ=========================================*/
+.discript1, .discript2, .discript3, .discript4, .discript5{
+  position: absolute;
+  width: 35%;
+  background-color: rgba(0, 0, 0, 0.56);
+  bottom: 15px;
+  padding: 10px;
+
+}
+.opis h3{
+  color: #fff;
+  margin: 0;
+  margin-bottom: 3px;
+  font-family: Times New Roman;
+}
+.opis  p{
+  color: #fff;
+  margin: 0;
+  font-size: 14px;
+  font-family: Times New Roman;
+}
+/*========пауза в анимации при наведении на слайд=========*/
+.slider:hover .opis{
+  -moz-animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+/*===КНОПКИ КРУГЛЯШИ===============*/
+
+.but1, .but2, .but3, .but4, .but5 {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: transparent;
+  bottom: 24px;
+  left: 50%;
+  right: 10px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 1000;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 14px;
+  outline:none;
+  margin-bottom: 16%;
+}
+.but1{
+  margin-left: -48%;
+}
+.but2{
+  margin-left: -27%;
+
+}
+.but3{
+  margin-left: -5%;
+
+}
+.but4{
+  margin-left: 17%;
+
+}
+.but5{
+  margin-left: 38%;
+
+}
+.round1, .round2, .round3, .round4, .round5{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background:   #fff;
+  bottom: 24px;
+  left: 50%;
+  right: 10px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: -1px -1px 1px 1px rgba(0,0,0, 0.5);
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 14px;
+  outline:none;
+  margin-bottom: 16%;
+}
+.round1{
+  margin-left: -48%;
+}
+.round2{
+  margin-left: -27%;
+}
+.round3{
+  margin-left: -5%;
+}
+.round4{
+  margin-left: 17%;
+}
+.round5{
+  margin-left: 38%;
+}
+/*==============Активация при анимации кружка навигации*=================*/
+.round1{
+  animation: butAnim 30s linear infinite;
+  -webkit-animation: butAnim 30s linear infinite;
+  -moz-animation: butAnim 30s linear infinite;
+  -o-animation: butAnim 30s linear infinite;
+}
+.round2{
+  animation: butAnim 30s linear 6s infinite;
+  -webkit-animation: butAnim 30s linear 6s infinite;
+  -moz-animation: butAnim 30s linear 6s infinite;
+  -o-animation: butAnim 30s linear 6s infinite;
+}
+.round3{
+  animation: butAnim 30s linear 12s infinite;
+  -webkit-animation: butAnim 30s linear 12s infinite;
+  -moz-animation: butAnim 30s linear 12s infinite;
+  -o-animation: butAnim 30s linear 12s infinite;
+}
+.round4{
+  animation: butAnim 30s linear 18s infinite;
+  -webkit-animation: butAnim 30s linear 18s infinite;
+  -moz-animation: butAnim 30s linear 18s infinite;
+  -o-animation: butAnim 30s linear 18s infinite;
+}
+.round5{
+  animation: butAnim 30s linear 24s infinite;
+  -webkit-animation: butAnim 30s linear 24s infinite;
+  -moz-animation: butAnim 30s linear 24s infinite;
+  -o-animation: butAnim 30s linear 24s infinite;
+}
+@keyframes butAnim {
+  0% {background-color: #fff;}
+  8% {background-color: #fff;}
+  17% {background-color: #fedd0e;}
+  25% {background-color: #fff;}
+  100% {background-color: #fff;}
+}
+@-webkit-keyframes butAnim {
+  0% {background-color: #fff;}
+  8% {background-color: #fff;}
+  17% {background-color: #fedd0e;}
+  25% {background-color: #fff;}
+  100% {background-color: #fff;}
+}
+@-o-keyframes butAnim {
+  0% {background-color: #fff;}
+  8% {background-color: #fff;}
+  17% {background-color: #fedd0e;}
+  25% {background-color: #fff;}
+  100% {background-color: #fff;}
+}
+@-moz-keyframes butAnim {
+  0% {background-color: #fff;}
+  8% {background-color: #fff;}
+  17% {background-color: #fedd0e;}
+  25% {background-color: #fff;}
+  100% {background-color: #fff;}
+}
+
+.slider:hover .nav{
+  -moz-animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+/*================ДЕЙСТВИя================*/
+.but1:focus ~ .opis, .but2:focus ~ .opis, .but3:focus ~ .opis, .but4:focus ~ .opis, .but5:focus ~ .opis {
+  -moz-animation: none;
+  -webkit-animation: none;
+  -o-animation: none;
+  animation: none;
+}
+.but1:focus ~ .nav, .but2:focus ~ .nav, .but3:focus ~ .nav, .but4:focus ~ .nav, .but5:focus ~ .nav{
+  -moz-animation: none;
+  -webkit-animation: none;
+  -o-animation: none;
+  animation: none;
+}
+
+.but1:focus ~ .img1, .but2:focus ~ .img2, .but3:focus ~ .img3, .but4:focus ~ .img4, .but5:focus ~ .img5 {
+  opacity: 1;
+  z-index: 15;
+}
+
+
+.but1:focus, .but2:focus, .but3:focus, .but4:focus, .but5:focus{
+  background-color:  #fedd0e;
+}
+
+@media only screen and (max-width:740px) {
+  .opis p{
+    display: none;
+  }
+  .opis h3{
+    font-size: 14px;
+    text-align: center;
+  }
+}
+

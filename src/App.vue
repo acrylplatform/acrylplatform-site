@@ -1,50 +1,147 @@
 <template>
-    <div>
-        <headline v-on:switch-lang="switchLang"></headline>
-        <main class="main">
-            <banner></banner>
-            <about></about>
-            <client></client>
-            <node></node>
-            <crypto></crypto>
-            <exchange></exchange>
-        </main>
-        <footline></footline>
-        <input name="cookieData" type="hidden" :data-cookie-text="$t('cookie.text', { lnk1: `<a href='cookies-policy.html'>Cookie policy</a>`, lnk2: `<a href='privacy-policy.html'>Privacy policy</a>`})">
-    </div>
+  <v-app id="inspire">
+    <!-- NAVICAGTION DRAWER -->
+    <v-navigation-drawer fixed left temporary v-model="drawer" class="hidden-md-and-up" style="z-index: 2147483646;">
+      <div class="nav-drawer">
+        <div class="topBlock">
+          <v-list-item>
+            <v-list-item-content>
+              <v-list-item-title class="title">
+                <div class="logotype">
+                  <router-link to="/"><img class="vert-center widthMobil" src='/img/Acryl-Logo.svg' alt="acryl-logo"/></router-link>
+                </div>
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-divider></v-divider>
+
+          <div v-for="(item, i) in getmenuItems" :key="`drawerMenu${i}`">
+              <v-list-item>
+                <v-list-item-content>
+                  <v-list-item-title class="title">
+                      <a :href="`${item.link}`" class="elHover" :target="`${item.target}`" rel="noreferrer noopener">{{item.text}}</a>
+                  </v-list-item-title>
+                </v-list-item-content>
+              </v-list-item>
+              <v-divider></v-divider>
+          </div>
+          <div class="bottomBlock">
+            <v-divider></v-divider>
+            <v-list-item>
+              <v-list-item-content>
+                <v-list-item-title class="title">
+                  <a :href="`tel:${addressItems.numberLink}`" class="noDecoration secondaryColor" >{{addressItems.number}}</a>
+                </v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+            <v-divider></v-divider>
+            <v-list-item>
+              <v-list-item-content>
+                <v-list-item-title class="title">
+                  <v-btn rounded small href="#targetOffer">Заказать</v-btn>
+                </v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </div>
+        </div>
+
+
+      </div>
+    </v-navigation-drawer>
+
+
+    <app-header :menu-items="menuItems" v-on:changeDrawer="changeDrawerReverse"></app-header>
+
+    <!-- PAGES BLOCKS  -->
+    <router-view></router-view>
+    
+    <footer-block :footer-items="menuItems" :addressItems="addressItems"></footer-block>
+  </v-app>
 </template>
 
 <script>
-    import headline from '../src/Header.vue'
-    import banner from '../src/Banner.vue'
-    import about from '../src/About.vue'
-    import client from '../src/Client.vue'
-    import node from '../src/Node.vue'
-    import crypto from '../src/Crypto.vue'
-    import exchange from '../src/Exchange.vue'
-    import footline from '../src/Footer.vue'
+import AppHeader from '@/components/AppHeader'
+import FooterBlock from '@/components/FooterBlock'
 
-    import locale from '../src/locale.js'
-    
-    export default{
-        components: {
-            headline,
-            banner,
-            about,
-            client,
-            node,
-            crypto,
-            exchange,
-            footline
-        },
-        i18n: {
-            messages: {},
-            sharedMessages: locale
-        },
-        methods: {
-            switchLang: function(lang) {
-                this.$emit('switch-lang', lang)
-            }
-        }
+export default {
+  name: 'App',
+
+  components: {
+    AppHeader,
+    FooterBlock
+  },
+
+  data() {
+    return {
+      menuItems: [
+         {id: 1, text: "CLIENT", link: "#infoblock", target: "_self", click: "Click_more"},
+         {id: 2, text: "EXPLORER", link: "#instructionblock", target: "_self", click: "Click_more"},
+        {id: 3, text: "CHECKNODE", link: "#clientblock", target: "_self", click: "Click_more"},
+        {id: 4, text: "BLOG", link: "https://medium.com/acrylplatformru", target: "_blank", click: "Sublit_Blog1"},
+       // {id: 5, text: "Контакты", link: "#contacts", target: "_self", click: "Click_contact"}
+      ],
+      drawer: false,
+      addressItems: {
+        city: "г.Новосибирск",
+        address: "ул. Фабричная 17/4 (12,13 этаж)",
+        number: "8 (800) 511-3715",
+        numberLink: "88005113715",
+        email: "sales@acrylplatform.com",
+        support: "Поддержка:",
+        emailsupport: "support@acrylplatform.com"
+      }
     }
+  },
+  computed: {
+    getmenuItems(){
+      return this.menuItems
+    }
+  },
+  methods: {
+    changeDrawerReverse() {
+      this.drawer = !this.drawer;
+    }
+  }
+};
 </script>
+
+<style lang="scss" scoped>
+@import "./assets/styles/index.scss";
+#inspire{
+  font-family: $body-font-family !important;
+  .nav-drawer{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    .bottomBlock{
+      .noDecoration{
+        text-decoration: none;
+      }
+    }
+  }
+}
+.logotype{
+  width: 120px;
+  margin: 0;
+  padding: 0;
+  img{
+    width: 200px;
+    height: auto;
+  }
+}
+.v-btn__content{
+    color: $secondaryColor !important;
+}
+.theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
+  background-color: black;
+}
+.theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined):hover {
+  background-color: #3C3C40;
+}
+
+</style>

@@ -1,0 +1,181 @@
+
+.wrap{
+  height: auto !important;
+  height: 100%;
+  min-height: 100%;
+
+  padding-top: 1px;
+  width: auto;
+  max-width: 960px;
+  margin: 0px auto;
+  position: relative;
+}
+.slider{
+  width: 100%;
+  margin: 0 auto;
+ // margin-top: 20px;
+  position: relative;
+}
+/*=============СЛАЙДЫ===================*/
+.img1{
+  position: relative;
+  max-width: 100%;
+  -webkit-transition-property:opacity, z-index;
+  -webkit-transition-duration:2s;
+  -moz-transition-property:opacity, z-index;
+  -moz-transition-duration:2s;
+  -o-transition-property:opacity, z-index;
+  -o-transition-duration:2s;
+  transition-property:opacity, z-index;
+  transition-duration:2s;
+  opacity: 1; /*не прозрачная только первая картинка*/
+  z-index: 1;
+}
+.img2, .img3{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  -webkit-transition-property:opacity, z-index;
+  -webkit-transition-duration:2s;
+  -moz-transition-property:opacity, z-index;
+  -moz-transition-duration:2s;
+  -o-transition-property:opacity, z-index;
+  -o-transition-duration:2s;
+  transition-property:opacity, z-index;
+  transition-duration:2s;
+  opacity: 0;
+}
+
+img{
+  max-width: 100%;
+  vertical-align: middle;
+}
+/*============Анимация слайдов=======================*/
+.img1{
+  animation: imgAnim 15s linear infinite;
+  -webkit-animation: imgAnim 15s linear infinite;
+  -moz-animation: imgAnim 15s linear infinite;
+  -o-animation: imgAnim 15s linear infinite;
+}
+
+.img2{
+  animation: imgAnim 15s linear 5s infinite;
+}
+.img3{
+  animation: imgAnim 15s linear 10s infinite;
+}
+
+@keyframes imgAnim {
+  0% { opacity: 0; z-index: 5; }
+  20% { opacity: 1; z-index: 5; }
+  30% { opacity: 1; z-index: 5; }
+  40% { opacity: 0; z-index: 5;}
+  100% { opacity: 0; z-index: 5;}
+}
+@-webkit-keyframes imgAnim {
+  0% { opacity: 0; z-index: 5; }
+  20% { opacity: 1; z-index: 5; }
+  30% { opacity: 1; z-index: 5; }
+  40% { opacity: 0; z-index: 5;}
+  100% { opacity: 0; z-index: 5;}
+}
+@-o-keyframes imgAnim {
+  0% { opacity: 0; z-index: 5; }
+  20% { opacity: 1; z-index: 5; }
+  30% { opacity: 1; z-index: 5; }
+  40% { opacity: 0; z-index: 5;}
+  100% { opacity: 0; z-index: 5;}
+}
+@-moz-keyframes imgAnim {
+  0% { opacity: 0; z-index: 5; }
+  20% { opacity: 1; z-index: 5; }
+  30% { opacity: 1; z-index: 5; }
+  40% { opacity: 0; z-index: 5;}
+  100% { opacity: 0; z-index: 5;}
+}
+
+/*=====ОПИСАНИЕ=========================================*/
+.discript1, .discript2, .discript3{
+  position: absolute;
+  width: 35%;
+  background-color: rgba(0, 0, 0, 0.56);
+  bottom: 15px;
+  padding: 10px;
+
+}
+/*========пауза в анимации при наведении на слайд=========*/
+.slider:hover .tank{
+  -moz-animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+/*===КНОПКИ КРУГЛЯШИ===============*/
+
+.but1, .but2, .but3{
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  bottom: 80px;
+  left: 50%;
+  right: 10px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: -1px -1px 1px 1px rgba(0,0,0, 0.5);
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  outline:none;
+  margin-left: 6%;
+  margin-bottom: -25%;
+}
+.but1{
+  margin-left: -75px;
+}
+.but2{
+  margin-left: -25px;
+}
+
+.but1{
+  animation: butAnim 15s linear infinite;
+  -webkit-animation: butAnim 15s linear infinite;
+  -moz-animation: butAnim 15s linear infinite;
+  -o-animation: butAnim 15s linear infinite;
+}
+
+.but2{
+  animation: butAnim 15s linear 5s infinite;
+}
+.but3{
+  animation: butAnim 15s linear 10s infinite;
+}
+
+.slider:hover .nav{
+  -moz-animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+/*================ДЕЙСТВИЯ================*/
+.but1:focus ~ .img1, .but2:focus ~ .img2, .but3:focus ~ .img3{
+  -moz-animation: none;
+  -webkit-animation: none;
+  -o-animation: none;
+  animation: none;
+}
+.but1:focus ~ .nav, .but2:focus ~ .nav, .but3:focus ~ .nav{
+  -moz-animation: none;
+  -webkit-animation: none;
+  -o-animation: none;
+  animation: none;
+}
+
+.but1:focus ~ .img1, .but2:focus ~ .img2, .but3:focus ~ .img3{
+  opacity: 1;
+  z-index: 15;
+}

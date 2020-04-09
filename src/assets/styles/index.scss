@@ -1,0 +1,117 @@
+$extraSmall: 375px;
+$small: 600px;
+$medium: 960px;
+$large: 1264px;
+$extraLarge: 1904px;
+
+//Variables for text
+$headSection: 24px;
+$headHeightLineSection: 29px;
+$textSection: 16px;
+$textHeadLineSection: 20px;
+$subheadSection: 16px;
+$subheadHeightLineSection: 20px;
+
+//Variables for colors
+$primaryColor: #FFA800;
+$primaryTextColor: #E0C203;
+$secondaryColor: #202020;
+
+//Fonts
+$font-family: 'Montserrat', sans-serif;
+$body-font-family: 'Montserrat', sans-serif;
+
+@mixin respond-to($media) {
+    @if $media == handhelds {
+      @media only screen and (max-width: $small -1) { @content; }
+    }
+    @else if $media == medium-screens {
+      @media only screen and (min-width: $small){ @content; }
+    }
+    @else if $media == large-screens {
+      @media only screen and (min-width: $medium){ @content; }
+    }
+    @else if $media == wide-screens {
+      @media only screen and (min-width: $large) { @content; }
+    }
+}
+body{
+  font-family: $font-family !important;
+  overflow: hidden;
+}
+
+.mxw1200{
+  max-width: 1200px;
+  margin-left:auto;
+  margin-right: auto;
+  // box-shadow: 0px 0.1px 0px 0px;
+}
+
+// .mxw1200v2{
+//   max-width: 1200px;
+//   margin-left:auto;
+//   margin-right: auto;
+// }
+
+// .v-card:not(.v-sheet--tile):not(.v-card--shaped) {
+//   background: #FBFBFB;
+// }
+
+// .CheckBoxUp .v-input__control .v-input__slot{
+//   align-items: flex-start !important;
+// }
+
+// .i-header {
+//   z-index: 22222;
+// }
+
+// .v-application .px-0 {
+//   // padding-left: 5px !important;
+// }
+
+// .v-input__control .v-input__slot {
+//   margin-bottom: 0;
+// }
+
+// .v-application .py-5 {
+//   padding-top: 0 !important;
+//   padding-left: 71px;
+//   padding-right: 71px;
+// }
+
+// .v-input--selection-controls.v-input.fsize  {
+//     padding-left: 70px;
+//     padding-right: 70px;
+//   }
+
+// .v-input--selection-controls .v-input__slot > .v-label, .v-input--selection-controls .v-radio > .v-label {
+//   font-size: 14px;
+// }
+
+// .v-application .px-3 {
+//   padding-top: 0;
+//   padding-bottom: 0;
+// }
+
+// .v-btn .v-btn__content {
+//   color: #fedd0e;
+// }
+
+// .v-btn--rounded {
+//   border-radius: 0px;
+// }
+
+// .v-text-field {
+//   padding-top: 31px;
+// }
+
+// b, strong {
+// font-weight: 500;
+// }
+
+//classes for text
+.text-bold{font-weight: bold;}
+
+//classes for colors
+.primaryColor { color: $primaryColor !important}
+.secondaryColor { color: $secondaryColor !important}
