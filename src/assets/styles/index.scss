@@ -16,6 +16,8 @@ $subheadHeightLineSection: 20px;
 $primaryColor: #FFA800;
 $primaryTextColor: #E0C203;
 $secondaryColor: #202020;
+$yellowBgr: #FFC600;
+$yellowBgr2: #FFC900;
 
 //Fonts
 $font-family: 'Montserrat', sans-serif;
@@ -52,3 +54,14 @@ body{
 //classes for colors
 .primaryColor { color: $primaryColor !important}
 .secondaryColor { color: $secondaryColor !important}
+
+//classes for sections
+.headSection {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  @include respond-to(large-screens) { text-align: left; }
+}
