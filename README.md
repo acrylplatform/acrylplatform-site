@@ -1,4 +1,4 @@
-# acrylplatform
+# Acrylplatform
 
 ## Project setup
 ```
