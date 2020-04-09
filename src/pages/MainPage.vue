@@ -1,38 +1,32 @@
 <template>
     <div>
-        <main-block></main-block>
-        <!-- <project-info-block></project-info-block>
-        <device-info-block></device-info-block>
-        <compare-block></compare-block>
-        <instruction-block></instruction-block>
-        <client-block></client-block>
-        <faq-block :addressItems="addressItems"></faq-block> -->
-        <form-block></form-block>
+        <main-block />
+        <fields-of-app-block />
+        <why-choose-acryl-block />
+        <software-solutions-block />
+        <ready-solutions-block />
+        <form-block />
     </div>
 </template>
 
 <script>
-import MainBlock from '@/components/MainBlock'
-// import ProjectInfoBlock from '@/components/ProjectInfoBlock'
-// import DeviceInfoBlock from '@/components/DeviceInfoBlock'
-// import CompareBlock from '@/components/CompareBlock'
-// import InstructionBlock from '@/components/InstructionBlock'
-// import ClientBlock from '@/components/ClientBlock'
-// import FaqBlock from '@/components/FaqBlock'
-import FormBlock from '@/components/FormBlock'
+import MainBlock from '@/components/MainBlock/MainBlock'
+import FieldsOfAppBlock from '@/components/FieldsOfAppBlock/FieldsOfAppBlock'
+import WhyChooseAcrylBlock from '@/components/WhyChooseAcrylBlock/WhyChooseAcrylBlock'
+import SoftwareSolutionsBlock from '@/components/SoftwareSolutionsBlock/SoftwareSolutionsBlock'
+import ReadySolutionsBlock from '@/components/ReadySolutionsBlock/ReadySolutionsBlock'
+import FormBlock from '@/components/FormBlock/FormBlock'
 
 export default {
   name: 'App',
 
   components: {
-    MainBlock,
-    // ProjectInfoBlock,
-    // DeviceInfoBlock,
-    // CompareBlock,
-    // InstructionBlock,
-    // ClientBlock,
-    // FaqBlock,
-    FormBlock
+      MainBlock,
+      FieldsOfAppBlock,
+      WhyChooseAcrylBlock,
+      SoftwareSolutionsBlock,
+      ReadySolutionsBlock,
+      FormBlock
   },
 
   data() {

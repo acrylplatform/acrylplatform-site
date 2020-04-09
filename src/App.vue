@@ -50,18 +50,18 @@
     </v-navigation-drawer>
 
 
-    <app-header :menu-items="menuItems" v-on:changeDrawer="changeDrawerReverse"></app-header>
+    <app-header :menu-items="menuItems" v-on:changeDrawer="changeDrawerReverse" />
 
     <!-- PAGES BLOCKS  -->
-    <router-view></router-view>
-    
-    <footer-block :footer-items="menuItems" :addressItems="addressItems"></footer-block>
+    <router-view />
+
+    <footer-block :footer-items="menuItems" :addressItems="addressItems" />
   </v-app>
 </template>
 
 <script>
-import AppHeader from '@/components/AppHeader'
-import FooterBlock from '@/components/FooterBlock'
+import AppHeader from '@/components/AppHeader/AppHeader'
+import FooterBlock from '@/components/FooterBlock/FooterBlock'
 
 export default {
   name: 'App',

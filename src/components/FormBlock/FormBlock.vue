@@ -42,7 +42,7 @@
                 outlined
                 >
                 <p class="errorMessage" v-if='errorMessage'>{{errorMessage}}</p>
-                <p class="response" v-if='response'>{{response}}</p>    
+                <p class="response" v-if='response'>{{response}}</p>
                 <v-btn rounded outlined @click="reversModal()">Закрыть</v-btn>
                 </v-card>
             </div>
@@ -135,7 +135,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/styles/index.scss";
+@import "../../assets/styles/index";
 #targetOffer{
     position: absolute;
     left: 0;

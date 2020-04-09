@@ -5,9 +5,9 @@
                 <v-col cols='12' sm='6' lg='3' class="marwieght">
                     <h4>{{head1}}</h4>
                     <div class="directions">
-                        <a v-for="(direction, i) in directions" 
-                            :key="`direction${i}`" 
-                            :href="`${direction.link}`" 
+                        <a v-for="(direction, i) in directions"
+                            :key="`direction${i}`"
+                            :href="`${direction.link}`"
                             target="_blank"
                             @click="`${SubmitBTN(direction.click)}`"><img  :src="`/img/directions/${direction.img}.svg`"></a>
                     </div>
@@ -18,7 +18,7 @@
                         <a v-for="(menuItem, i) in footerItems" :key="`menuItem${i}`" :href="`${menuItem.link}`"  @click="`${SubmitBTN(menuItem.click)}`" target="`${menuItem.target}`">
                             {{menuItem.text}}
                         </a>
-                    </div>                    
+                    </div>
                 </v-col>
                 <v-col cols='12' sm='6' lg='3'>
                     <h4>{{head3}}</h4>
@@ -29,7 +29,7 @@
                         <p class="op07">{{addressItems.address}}</p>
                         <p class="op07">{{addressItems.support}}</p>
                         <p><b><a :href="`mailto:${addressItems.emailsupport}`" @click="`${Submit_EmailLetter()}`">{{addressItems.emailsupport}}</a></b></p>
-                    </div>                    
+                    </div>
                 </v-col>
                 <v-col cols='12' sm='6' lg='3'>
                     <h4>{{head4}}</h4>
@@ -62,7 +62,7 @@
                 </v-col>
                 <v-col cols='12' sm='6' lg='3' class="iconwieght">
                     <div class="social">
-                        <a v-for="(item, i) in iconItems" :key="`iconSocial${i}`" :href="`${item.link}`" target="_blank" rel="noreferrer noopener" @click="`${SubmitBTN(item.click)}`"> 
+                        <a v-for="(item, i) in iconItems" :key="`iconSocial${i}`" :href="`${item.link}`" target="_blank" rel="noreferrer noopener" @click="`${SubmitBTN(item.click)}`">
                             <img :src="`/img/social/icon_social_${item.icon}.svg`" :alt="`${item.icon}`">
                         </a>
                     </div>
@@ -98,7 +98,7 @@
                 </v-card>
             </div>
         </div>
-        
+
     </section>
 </template>
 
@@ -242,82 +242,82 @@ export default {
         Submit_FB(){
             console.log("Submit_FB")
             window.gaSendButton("Submit_FB");
-            window.yaSendButton("Submit_FB");         
+            window.yaSendButton("Submit_FB");
         },
         Submit_TG(){
             console.log("Submit_TG")
             window.gaSendButton("Submit_TG");
-            window.yaSendButton("Submit_TG");         
+            window.yaSendButton("Submit_TG");
         },
         Submit_TW(){
             console.log("Submit_TW")
             window.gaSendButton("Submit_TW");
-            window.yaSendButton("Submit_TW");         
+            window.yaSendButton("Submit_TW");
         },
         Submit_VK(){
             console.log("Submit_TW")
             window.gaSendButton("Submit_TW");
-            window.yaSendButton("Submit_TW");         
+            window.yaSendButton("Submit_TW");
         },
         Submit_IG(){
             console.log("Submit_IG")
             window.gaSendButton("Submit_IG");
-            window.yaSendButton("Submit_IG");         
+            window.yaSendButton("Submit_IG");
         },
         Submit_github(){
             console.log("Submit_github")
             window.gaSendButton("Submit_github");
-            window.yaSendButton("Submit_github");         
+            window.yaSendButton("Submit_github");
         },
         Submit_EmailLetter(){
             console.log("Submit_EmailLetter")
             window.gaSendButton("Submit_EmailLetter");
-            window.yaSendButton("Submit_EmailLetter");         
+            window.yaSendButton("Submit_EmailLetter");
         },
         Submit_tel2(){
             console.log("Submit_tel2")
             window.gaSendButton("Submit_tel2");
-            window.yaSendButton("Submit_tel2");         
+            window.yaSendButton("Submit_tel2");
         },
         Click_order4(){
             console.log("Click_order4")
             window.gaSendButton("Click_order4");
-            window.yaSendButton("Click_order4");         
+            window.yaSendButton("Click_order4");
         },
         Click_contact(){
             console.log("Click_contact")
             window.gaSendButton("Click_contact");
-            window.yaSendButton("Click_contact");         
+            window.yaSendButton("Click_contact");
         },
         Submit_Blog2(){
             console.log("Submit_Blog2")
             window.gaSendButton("Submit_Blog2");
-            window.yaSendButton("Submit_Blog2");         
+            window.yaSendButton("Submit_Blog2");
         },
         Submit_support(){
             console.log("Submit_support")
             window.gaSendButton("Submit_support");
-            window.yaSendButton("Submit_support");         
+            window.yaSendButton("Submit_support");
         },
         Click_more(){
             console.log("Click_more")
             window.gaSendButton("Click_more");
-            window.yaSendButton("Click_more");         
+            window.yaSendButton("Click_more");
         },
         Submit_platform(){
             console.log("Submit_platform")
             window.gaSendButton("Submit_platform");
-            window.yaSendButton("Submit_platform");         
+            window.yaSendButton("Submit_platform");
         },
         Submit_1c(){
             console.log("Submit_1c")
             window.gaSendButton("Submit_1c");
-            window.yaSendButton("Submit_1c");         
+            window.yaSendButton("Submit_1c");
         },
         Submit_CDN(){
             console.log("Submit_CDN")
             window.gaSendButton("Submit_CDN");
-            window.yaSendButton("Submit_CDN");         
+            window.yaSendButton("Submit_CDN");
         },
       Submit_Enterprise(){
           console.log("Submit_Enterprise")
@@ -329,7 +329,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/styles/index.scss";
+@import "../../assets/styles/index";
 .footer-block{
     color: white;
     background-color: $secondaryColor;
@@ -420,7 +420,7 @@ export default {
             margin: 0;
             padding: 0;
         }
-        a{margin: 0 20px 0 0;}  
+        a{margin: 0 20px 0 0;}
     }
 }
 .agreeCheckLabel{

@@ -91,7 +91,7 @@ export default {
 </script>
 
 <style lang="scss" scope>
-@import "../assets/styles/index.scss";
+@import "../../assets/styles/index";
 .display1200{
   width: 100%;
   max-width: 1200px;
