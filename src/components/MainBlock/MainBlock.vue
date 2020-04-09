@@ -3,13 +3,26 @@
     <div class="imgHeaderPosition">
       <div class="imgHeaderBlock">
         <v-row class="textBlock">
-          <v-col cols="12" md="4" offset-md="1" offset-xl="0">
+          <v-col
+            cols="12"
+            md="4"
+            offset-md="1"
+            offset-xl="0"
+          >
             <div class="btnHeaderBlock">
               <div class="textHeaderBlock">
-                <p class="headText">{{ text1 }}</p>
-                <p class="bodyText">{{ text2 }}</p>
+                <p class="headText">
+                  {{ text1 }}
+                </p>
+                <p class="bodyText">
+                  {{ text2 }}
+                </p>
               </div>
-              <v-dialog v-model="dialog" max-width="450" class="popup">
+              <v-dialog
+                v-model="dialog"
+                max-width="450"
+                class="popup"
+              >
                 <template v-slot:activator="{ on }">
                   <v-btn
                     class="contentBtn"
@@ -289,7 +302,7 @@ export default {
           text-align: center;
           @include respond-to(large-screens) {
             text-align: left;
-        }
+          }
         }
         p {
           font-style: normal;

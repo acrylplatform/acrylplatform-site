@@ -1,14 +1,26 @@
 <template>
   <v-app id="inspire">
     <!-- NAVICAGTION DRAWER -->
-    <v-navigation-drawer fixed left temporary v-model="drawer" class="hidden-md-and-up" style="z-index: 2147483646;">
+    <v-navigation-drawer
+      fixed
+      left
+      temporary
+      v-model="drawer"
+      class="hidden-md-and-up"
+      style="z-index: 2147483646;"
+    >
       <div class="nav-drawer">
         <div class="topBlock">
           <v-list-item>
             <v-list-item-content>
               <v-list-item-title class="title">
                 <div class="logotype">
-                  <router-link to="/"><img class="vert-center widthMobil" src='/img/Acryl-Logo.svg' alt="acryl-logo"/></router-link>
+                  <router-link to="/"
+                    ><img
+                      class="vert-center widthMobil"
+                      src="/img/Acryl-Logo.svg"
+                      alt="acryl-logo"
+                  /></router-link>
                 </div>
               </v-list-item-title>
             </v-list-item-content>
@@ -16,21 +28,31 @@
           <v-divider></v-divider>
 
           <div v-for="(item, i) in getmenuItems" :key="`drawerMenu${i}`">
-              <v-list-item>
-                <v-list-item-content>
-                  <v-list-item-title class="title">
-                      <a :href="`${item.link}`" class="elHover" :target="`${item.target}`" rel="noreferrer noopener">{{item.text}}</a>
-                  </v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
-              <v-divider></v-divider>
+            <v-list-item>
+              <v-list-item-content>
+                <v-list-item-title class="title">
+                  <a
+                    :href="`${item.link}`"
+                    class="elHover"
+                    :target="`${item.target}`"
+                    rel="noreferrer noopener"
+                    >{{ item.text }}</a
+                  >
+                </v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+            <v-divider></v-divider>
           </div>
           <div class="bottomBlock">
             <v-divider></v-divider>
             <v-list-item>
               <v-list-item-content>
                 <v-list-item-title class="title">
-                  <a :href="`tel:${addressItems.numberLink}`" class="noDecoration secondaryColor" >{{addressItems.number}}</a>
+                  <a
+                    :href="`tel:${addressItems.numberLink}`"
+                    class="noDecoration secondaryColor"
+                    >{{ addressItems.number }}</a
+                  >
                 </v-list-item-title>
               </v-list-item-content>
             </v-list-item>
@@ -44,13 +66,13 @@
             </v-list-item>
           </div>
         </div>
-
-
       </div>
     </v-navigation-drawer>
 
-
-    <app-header :menu-items="menuItems" v-on:changeDrawer="changeDrawerReverse" />
+    <app-header
+      :menu-items="menuItems"
+      v-on:changeDrawer="changeDrawerReverse"
+    />
 
     <!-- PAGES BLOCKS  -->
     <router-view />
@@ -60,11 +82,11 @@
 </template>
 
 <script>
-import AppHeader from '@/components/AppHeader/AppHeader'
-import FooterBlock from '@/components/FooterBlock/FooterBlock'
+import AppHeader from "@/components/AppHeader/AppHeader";
+import FooterBlock from "@/components/FooterBlock/FooterBlock";
 
 export default {
-  name: 'App',
+  name: "App",
 
   components: {
     AppHeader,
@@ -74,11 +96,35 @@ export default {
   data() {
     return {
       menuItems: [
-         {id: 1, text: "CLIENT", link: "#infoblock", target: "_self", click: "Click_more"},
-         {id: 2, text: "EXPLORER", link: "#instructionblock", target: "_self", click: "Click_more"},
-        {id: 3, text: "CHECKNODE", link: "#clientblock", target: "_self", click: "Click_more"},
-        {id: 4, text: "BLOG", link: "https://medium.com/acrylplatformru", target: "_blank", click: "Sublit_Blog1"},
-       // {id: 5, text: "Контакты", link: "#contacts", target: "_self", click: "Click_contact"}
+        {
+          id: 1,
+          text: "CLIENT",
+          link: "#infoblock",
+          target: "_self",
+          click: "Click_more"
+        },
+        {
+          id: 2,
+          text: "EXPLORER",
+          link: "#instructionblock",
+          target: "_self",
+          click: "Click_more"
+        },
+        {
+          id: 3,
+          text: "CHECKNODE",
+          link: "#clientblock",
+          target: "_self",
+          click: "Click_more"
+        },
+        {
+          id: 4,
+          text: "BLOG",
+          link: "https://medium.com/acrylplatformru",
+          target: "_blank",
+          click: "Sublit_Blog1"
+        }
+        // {id: 5, text: "Контакты", link: "#contacts", target: "_self", click: "Click_contact"}
       ],
       drawer: false,
       addressItems: {
@@ -90,11 +136,11 @@ export default {
         support: "Поддержка:",
         emailsupport: "support@acrylplatform.com"
       }
-    }
+    };
   },
   computed: {
-    getmenuItems(){
-      return this.menuItems
+    getmenuItems() {
+      return this.menuItems;
     }
   },
   methods: {
@@ -107,9 +153,9 @@ export default {
 
 <style lang="scss" scoped>
 @import "./assets/styles/index.scss";
-#inspire{
+#inspire {
   font-family: $body-font-family !important;
-  .nav-drawer{
+  .nav-drawer {
     position: fixed;
     top: 0;
     width: 100%;
@@ -118,30 +164,29 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     align-content: space-between;
-    .bottomBlock{
-      .noDecoration{
+    .bottomBlock {
+      .noDecoration {
         text-decoration: none;
       }
     }
   }
 }
-.logotype{
+.logotype {
   width: 120px;
   margin: 0;
   padding: 0;
-  img{
+  img {
     width: 200px;
     height: auto;
   }
 }
-.v-btn__content{
-    color: $secondaryColor !important;
+.v-btn__content {
+  color: $secondaryColor !important;
 }
 .theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
   background-color: black;
 }
 .theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined):hover {
-  background-color: #3C3C40;
+  background-color: #3c3c40;
 }
-
 </style>

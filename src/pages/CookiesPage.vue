@@ -1,26 +1,22 @@
 <template>
-    <div class="sectionPage">
-        <h2>{{text.en.head}}</h2>
-        <p><span v-html="text.en.paragraphs"></span></p>
-    </div>
+  <div class="sectionPage">
+    <h2>{{ text.en.head }}</h2>
+    <p><span v-html="text.en.paragraphs" /></p>
+  </div>
 </template>
 
 <script>
-
-
 export default {
-  name: 'App',
+  name: "App",
 
-  components: {
-
-  },
+  components: {},
 
   data() {
     return {
-        text: {
-            en: {
-                head: `OUR USE OF COOKIES, WEB BEACONS, AND SIMILAR TECHNOLOGIES`,
-                paragraphs: `
+      text: {
+        en: {
+          head: `OUR USE OF COOKIES, WEB BEACONS, AND SIMILAR TECHNOLOGIES`,
+          paragraphs: `
 Last Revised: 01/02/2020
  <br /><br />
 First and foremost, we DO NOT sell your personal information. However, when you visit or interact with our sites, services, applications, tools or messaging, we or our authorized service providers may use cookies, web beacons, and other similar technologies to make your experience better, faster and safer, for advertising purposes and to allow us to continuously improve our sites, services, applications and tools. Any personal information or data collected by these technologies is used only by us or by our authorized service providers on our behalf.
@@ -76,21 +72,20 @@ More information about cookies
 • The UK Information Commissioner's Office (ICO) cookie guide can be found on the ICO website: <a  style="color: #0E60FE;" href="https://ico.org.uk/your-data-matters/online/cookies/">https://ico.org.uk/your-data-matters/online/cookies/</a><br />
 <br /><br />
 Contact Us<br />
-We hope the information in this policy provides you with clear information about the technologies we use and the purposes for which we use them, but it you have any additional questions, or require any additional information, please review our Privacy Policy or contact us at info@acrylplatform.com.`,
-
-            }
+We hope the information in this policy provides you with clear information about the technologies we use and the purposes for which we use them, but it you have any additional questions, or require any additional information, please review our Privacy Policy or contact us at info@acrylplatform.com.`
         }
-    }
+      }
+    };
   }
 };
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/styles/index.scss";
-.sectionPage{
-    width: 100%;
-    max-width: 1200px;
-    padding: 0 20px;
-    margin: 100px auto;
+.sectionPage {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 100px auto;
 }
 </style>

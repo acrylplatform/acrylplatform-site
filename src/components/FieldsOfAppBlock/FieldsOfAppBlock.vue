@@ -1,13 +1,11 @@
 <template>
-    <h1>FieldsOfAppBlock</h1>
+  <h1>FieldsOfAppBlock</h1>
 </template>
 
 <script>
-    export default {
-        name: "FieldsOfAppBlock"
-    }
+export default {
+  name: "FieldsOfAppBlock"
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -1,26 +1,22 @@
 <template>
-    <div class="sectionPage">
-        <h2>{{text.ru.head}}</h2>
-        <p><span v-html="text.ru.paragraphs"></span></p>
-    </div>
+  <div class="sectionPage">
+    <h2>{{ text.ru.head }}</h2>
+    <p><span v-html="text.ru.paragraphs" /></p>
+  </div>
 </template>
 
 <script>
-
-
 export default {
-  name: 'App',
+  name: "App",
 
-  components: {
-
-  },
+  components: {},
 
   data() {
     return {
-        text: {
-            ru: {
-                head: `Политика конфиденциальности`,
-                paragraphs: `
+      text: {
+        ru: {
+          head: `Политика конфиденциальности`,
+          paragraphs: `
 Настоящий документ «Политика конфиденциальности» (далее — «Политика») представляет собой правила использования сайтом — https://node.acrylplatform.com/ ООО “АКРИЛ РУС” (далее — Оператор) персональной информации Пользователя, которую Оператор может получить о Пользователе во время использования им Сайта, любого из сервисов, служб, программ, продуктов или услуг Оператора (далее — Сервис, Сайт) и в ходе исполнения Оператором любых соглашений и договоров с Пользователем. Использование Сайта означает безоговорочное согласие Пользователя с настоящей Политикой и указанными в ней условиями обработки его персональной информации; в случае несогласия с этими условиями Пользователь должен воздержаться от использования Сайта.
 <br /><br />
 1.Общие положения политики<br /><br />
@@ -73,7 +69,7 @@ export default {
 8.1. Заполняя любую из регистрационных форм на Сайте или посещая страницы Сайта, Пользователь автоматически принимает условия Политики конфиденциальности. Предоставив свои персональные данные, Пользователь подтверждает, что прочитал и выразил полное согласие с условиями Политики конфиденциальности без какого-либо изменения или дополнения, и разрешил Оператору обработку своих персональных по форме Согласия, как она утверждена в Приложении 1 к настоящей Политике.
 8.2. Все предложения, вопросы, запросы и иные обращения по поводу настоящей Политики и использования своих персональных данных Пользователь вправе направлять Сайту:
 • по адресу электронной почты:  info@acrylplatform.com
-• по почтовому адресу: 630007, г. Новосибирск, ул. Фабричная, д. 17/4, офис 3 
+• по почтовому адресу: 630007, г. Новосибирск, ул. Фабричная, д. 17/4, офис 3
 <br /><br />
 Приложение 1<br />
 к Политике конфиденциальности сайта <a href="/" style="color: #2EA9FB;">https://node.acrylplatform.com/</a><br /><br />
@@ -111,11 +107,11 @@ export default {
 <br /><br /><br />
 
 Подпись субъекта персональных данных (ФИО полностью):<br />
-__________________________________________________`,
-            },
-            en: {
-                head: `PRIVACY POLICY`,
-                paragraphs: `
+__________________________________________________`
+        },
+        en: {
+          head: `PRIVACY POLICY`,
+          paragraphs: `
 Last Revised: 2020-09-01
 <br /><br />
 ACRYL RUS, LLC. cares about your privacy. For this reason, we collect and use personal information only as needed to deliver our products, services, websites and mobile applications, and to communicate with you about the same, or as you have requested (collectively, our “Services”). Your personal information includes information such as:
@@ -129,7 +125,7 @@ ACRYL RUS, LLC. cares about your privacy. For this reason, we collect and use pe
 • Candidate information (for job applicants)<br />
 • Other data collected that could directly or indirectly identify you.<br />
 <br /><br />
-Our Privacy Policy not only explains how and why we use your personal information that we collect, but also how you can access, update or otherwise take control of your personal information. 
+Our Privacy Policy not only explains how and why we use your personal information that we collect, but also how you can access, update or otherwise take control of your personal information.
 If at any time you have questions about our practices or any of your rights described below, you may reach our Data Protection Officer (“DPO”) and our dedicated team that supports this office by contacting us at  info@acrylplatform.com. This inbox is actively monitored and managed so that we can deliver an experience that you can confidently trust.
 <br /><br />
 What information we collect, how we collect it, and why<br />
@@ -183,7 +179,7 @@ If we collect information from you in connection with a co-branded offer, it wil
 <br /><br />
 If you make use of a service that allows you to import contacts (ex. using email marketing services to send emails on your behalf), we will only use the contacts and any other personal information for the requested service. If you believe that anyone has provided us with your personal information and you would like to request that it be removed from our database, please contact us at  info@acrylplatform.com.
 <br /><br />
-Transfer of personal information abroad. If you utilize our Services from a country other than the country where our servers are located, your personal information may be transferred across international borders. 
+Transfer of personal information abroad. If you utilize our Services from a country other than the country where our servers are located, your personal information may be transferred across international borders.
 <br /><br />
 Compliance with legal, regulatory and law enforcement requests. We cooperate with government and law enforcement officials and private parties to enforce and comply with the law. We will disclose any information about you to government or law enforcement officials or private parties as we, in our sole discretion, believe necessary or appropriate to respond to claims and legal process (such as subpoena requests), to protect our property and rights or the property and rights of a third party, to protect the safety of the public or any person, or to prevent or stop activity we consider to be illegal or unethical.
 <br /><br />
@@ -202,19 +198,19 @@ How you can access, update or delete your data.<br />
 You can make a request to delete your personal information by writing to as at  info@acrylplatform.com. If you make a request to delete your personal information and that data is necessary for the products or services you have purchased, the request will be honored only to the extent it is no longer necessary for any Services purchased or required for our legitimate business purposes or legal or contractual record keeping requirements.
 <br /><br />
 If you are unable for any reason to write as at  info@acrylplatform.com you may also contact us by one of the methods described in the “Contacts” section below.`
-            }
         }
-    }
+      }
+    };
   }
 };
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/styles/index.scss";
-.sectionPage{
-    width: 100%;
-    max-width: 1200px;
-    padding: 0 20px;
-    margin: 100px auto;
+.sectionPage {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 100px auto;
 }
 </style>

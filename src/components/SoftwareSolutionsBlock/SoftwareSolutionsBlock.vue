@@ -1,13 +1,11 @@
 <template>
-    <h1>SoftwareSolutionsBlock</h1>
+  <h1>SoftwareSolutionsBlock</h1>
 </template>
 
 <script>
-    export default {
-        name: "SoftwareSolutionsBlock"
-    }
+export default {
+  name: "SoftwareSolutionsBlock"
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
