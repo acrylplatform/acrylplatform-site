@@ -65,3 +65,10 @@ body{
   text-align: center;
   @include respond-to(large-screens) { text-align: left; }
 }
+.i-header {
+  z-index: 22222;
+}
+
+.v-btn .v-btn__content {
+  color: $primaryColor;
+}
