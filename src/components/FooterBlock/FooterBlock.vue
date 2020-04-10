@@ -123,7 +123,7 @@
         >
           <div class="directions mweight">
             <a
-              href="#topTarget"
+              href="/"
             ><img
               src="/img/directions/Logo_ACRYL_Platform.svg"
             ></a>
@@ -135,12 +135,12 @@
           lg="3"
         >
           <div class="polit">
-            <router-link to="/privacy">
+            <a href="/privacy">
               Privacy Policy
-            </router-link>
-            <router-link to="/cookie">
+            </a>
+            <a href="/cookie">
               Cookie Policy
-            </router-link>
+            </a>
           </div>
         </v-col>
         <v-col
@@ -217,7 +217,7 @@
             outlined
             @click="reversModal()"
           >
-            Закрыть
+            Close
           </v-btn>
         </v-card>
       </div>
@@ -342,17 +342,17 @@ export default {
             console.log("response", response);
             this.email = "";
             this.modalTrue = true;
-            this.textError = "Форма успешно отправлена";
+            this.textError = "Form Submitted Successfully";
           })
           .catch(error => {
             console.log(error);
             this.email = "";
             this.modalTrue = true;
-            this.textError = "Форма успешно отправлена";
+            this.textError = "Form Submitted Successfully";
           });
       } else {
         this.modalTrue = true;
-        this.textError = "Вы не согласились с обработкой персональных данных";
+        this.textError = "You did not agree with the processing of personal data";
       }
       this.Submit_EmailSubscription();
     },
@@ -543,6 +543,10 @@ export default {
     a {
       color: white;
       text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      padding-bottom: 10px;
       &:hover {
         text-decoration: underline;
       }
@@ -561,7 +565,7 @@ export default {
       color: white;
       text-decoration: none;
       &:hover {
-        text-decoration: underline;
+        text-decoration: underline
       }
     }
   }

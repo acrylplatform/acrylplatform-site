@@ -90,7 +90,7 @@
             outlined
             @click="reversModal()"
           >
-            Закрыть
+            Close
           </v-btn>
         </v-card>
       </div>
@@ -118,9 +118,9 @@ export default {
       errorMessage: "",
       modalTrue: false,
       agreeCheckLabel: `
-                By clicking the "Send" button, 
-                I agree to the processing of my personal 
-                data in accordance with the 
+                By clicking the "Send" button,
+                I agree to the processing of my personal
+                data in accordance with the
                 <a style="color: #2EA9FB;" href="/privacy">Privacy Policy</a>.`,
       agreeCheck: false
     };
