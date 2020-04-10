@@ -47,7 +47,7 @@
                 href="tel:+78005113715"
                 class="disPrimary elHover"
                 @click="Submit_tel1()"
-              >+7 (800) 511-37-155</a>
+              >+7 (800) 511-37-15</a>
             </div>
           </v-toolbar-items>
         </div>
