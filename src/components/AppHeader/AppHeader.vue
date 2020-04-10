@@ -44,10 +44,10 @@
             </div>
             <div class="d-flex align-center pr-3">
               <a
-                href="tel:88005113715"
+                href="tel:+78005113715"
                 class="disPrimary elHover"
                 @click="Submit_tel1()"
-              >8 (800) 511-37-15</a>
+              >+7 (800) 511-37-155</a>
             </div>
           </v-toolbar-items>
         </div>
