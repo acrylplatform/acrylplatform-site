@@ -112,28 +112,28 @@ export default {
         {
           id: 1,
           text: "CLIENT",
-          link: "#infoblock",
-          target: "_self",
+          link: "https://client.acrylplatform.com/",
+          target: "_blank",
           click: "Click_more"
         },
         {
           id: 2,
           text: "EXPLORER",
-          link: "#instructionblock",
-          target: "_self",
+          link: "https://explorer.acrylplatform.com/",
+          target: "_blank",
           click: "Click_more"
         },
         {
           id: 3,
           text: "CHECKNODE",
-          link: "#clientblock",
-          target: "_self",
+          link: "https://checknode.acrylminer.com/",
+          target: "_blank",
           click: "Click_more"
         },
         {
           id: 4,
           text: "BLOG",
-          link: "https://medium.com/acrylplatformru",
+          link: "https://medium.com/acrylplatform",
           target: "_blank",
           click: "Sublit_Blog1"
         }
