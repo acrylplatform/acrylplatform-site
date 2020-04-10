@@ -18,14 +18,14 @@
                   {{ text2 }}
                 </p>
               </div>
-                <v-btn
-                  class="contentBtn"
-                  color="primaryColor"
-                  dark
-                  href="#targetOffer" 
-                >
-                  {{ btn }}
-                </v-btn>
+              <v-btn
+                class="contentBtn"
+                color="primaryColor"
+                dark
+                href="#targetOffer"
+              >
+                {{ btn }}
+              </v-btn>
             </div>
           </v-col>
         </v-row>
@@ -54,21 +54,17 @@ export default {
   width: 100%;
   .imgHeaderPosition {
     width: 100%;
-    max-width: 1600px;
     margin: 50px auto 0;
     overflow: hidden;
     height: 480px;
     @include respond-to(medium-screens) {
       height: 430px;
-      margin-top: 70px;
     }
     @include respond-to(large-screens) {
       height: 480px;
-      margin-top: 100px;
     }
     @include respond-to(wide-screens) {
       height: 480px;
-      border-radius: 240px;
     }
     .imgHeaderBlock {
       background-image: url(/img/headerImage.svg);
