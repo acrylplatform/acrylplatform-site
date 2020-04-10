@@ -7,7 +7,7 @@
           cols="12"
           offset-sm="5"
           md="3"
-          style="background-color: white; min-width: 304px; min-height: 456px; max-width: 355px; max-height: 528px; border-radius: 12px; margin-top: auto; margin-bottom: auto; margin-left: auto; margin-right: auto;"
+          style="background-color: white; min-width: 304px; min-height: 456px; max-width: 355px; max-height: 528px; margin-top: auto; margin-bottom: auto; margin-left: auto; margin-right: auto; padding: 30px;"
         >
           <h2
             class="headSection pb-3 secondaryColor "
