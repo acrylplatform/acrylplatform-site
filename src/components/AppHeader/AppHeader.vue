@@ -15,13 +15,13 @@
       <div class="display1200 h-100">
         <v-toolbar-title>
           <div class="logotype">
-            <router-link to="/">
+            <a href="/">
               <img
                 class="vert-center widthMobil"
                 src="/img/Acryl-Logo.svg"
                 alt="acryl-logo"
               >
-            </router-link>
+            </a>
           </div>
         </v-toolbar-title>
         <v-spacer />

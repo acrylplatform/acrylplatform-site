@@ -111,28 +111,28 @@ export default {
       menuItems: [
         {
           id: 1,
-          text: "CLIENT",
+          text: "Client",
           link: "https://client.acrylplatform.com/",
           target: "_blank",
           click: "Click_more"
         },
         {
           id: 2,
-          text: "EXPLORER",
+          text: "Explorer",
           link: "https://explorer.acrylplatform.com/",
           target: "_blank",
           click: "Click_more"
         },
         {
           id: 3,
-          text: "CHECKNODE",
+          text: "Checknode",
           link: "https://checknode.acrylminer.com/",
           target: "_blank",
           click: "Click_more"
         },
         {
           id: 4,
-          text: "BLOG",
+          text: "Blog",
           link: "https://medium.com/acrylplatform",
           target: "_blank",
           click: "Sublit_Blog1"
