@@ -46,6 +46,7 @@ export default {
   @import "../../assets/styles/index";  
   
   .ready-solutions-block{
+    padding-bottom: 40px;
     .cardInBlock{
       width: 288px;
       height: 185px;
