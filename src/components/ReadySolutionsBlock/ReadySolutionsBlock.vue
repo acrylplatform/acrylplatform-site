@@ -18,6 +18,7 @@
           <v-card
             class="mx-auto cardInBlock"                 
             :style="`background-image: url(/img/imgComponents/ReadySolutionsBlock/${item.icon}.png);`"
+            :href="`${item.link}`"
           >
           </v-card>
         </v-col>
@@ -33,9 +34,9 @@ export default {
     return {
       headSection: "Ready solutions",
       blocks:[
-        {id:0, icon:"node"},
-        {id:1, icon:"1c"},
-        {id:2, icon:"cdn"}
+        {id:0, icon:"node", link:"https://node.acrylplatform.com"},
+        {id:1, icon:"1c", link:"https://1c.acrylplatform.com/"},
+        {id:2, icon:"cdn", link:"https://cdn.acrylplatform.com/"}
       ]
     }
   }
