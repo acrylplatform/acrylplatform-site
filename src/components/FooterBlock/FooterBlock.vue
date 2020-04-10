@@ -108,7 +108,6 @@
               outlined
               href="#targetSubscription"
               dark
-              class="mx-auto"
               @click="formSubSend()"
             >
               SUBSCRIBE
@@ -126,7 +125,7 @@
             <a
               href="#topTarget"
             ><img
-              src="/img/directions/acryl-logo-white.svg"
+              src="/img/directions/Logo_ACRYL_Platform.svg"
             ></a>
           </div>
         </v-col>
@@ -252,8 +251,8 @@ export default {
       directions: [
         {
           id: 1,
-          img: "Logo_ACRYL_Platform",
-          link: "https://acrylplatform.com/",
+          img: "Logo_ACRYL_Node",
+          link: "https://node.acrylplatform.com/",
           click: "Submit_platform"
         },
         {
@@ -318,11 +317,11 @@ export default {
       ],
       email: "",
       agreeCheckLabel: `
-            By clicking the "Subscribe" button I agree 
-            to the processing of my personal data in accordance with the 
-            <a href="/privacy" style="color: #2EA9FB;">Privacy Policy</a>, а также
-            and to receive information about special 
-            offers on the specified e-mail and phone.`,
+        By clicking the "Subscribe" button I agree
+        to the processing of my personal data in accordance with the
+        <a href="/privacy" style="color: #2EA9FB;">Privacy Policy</a>, а также
+        and to receive information about special
+        offers on the specified e-mail and phone.`,
       agreeCheck: false,
       modalTrue: false,
       textError: ""
@@ -571,7 +570,7 @@ export default {
     max-width: 300px;
     display: flex;
     justify-content: center;
-    // align-content: center;
+    align-items: flex-start;
     flex-direction: column;
     @include respond-to(large-screens) {
      justify-content: flex-start;
@@ -611,7 +610,7 @@ export default {
   .copyright {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-items: center;
     justify-content: center;
     height: 100%;
@@ -657,18 +656,6 @@ export default {
         text-align: center;
       }
     }
-  }
-}
-@media (max-width: 489px) {
-  .marwieght {
-    margin-top: 27%;
-  }
-  .mweight {
-    margin: -236% 0 !important;
-    position: absolute;
-  }
-  .iconwieght {
-    margin-top: -457%;
   }
 }
 </style>
