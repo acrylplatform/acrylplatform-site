@@ -1,6 +1,6 @@
 <template>
   <div>
-    <main-block />
+    <header-block />
     <fields-of-app-block />
     <why-choose-acryl-block />
     <software-solutions-block />
@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import MainBlock from "@/components/MainBlock/MainBlock";
+import HeaderBlock from "@/components/HeaderBlock/HeaderBlock";
 import FieldsOfAppBlock from "@/components/FieldsOfAppBlock/FieldsOfAppBlock";
 import WhyChooseAcrylBlock from "@/components/WhyChooseAcrylBlock/WhyChooseAcrylBlock";
 import SoftwareSolutionsBlock from "@/components/SoftwareSolutionsBlock/SoftwareSolutionsBlock";
@@ -21,7 +21,7 @@ export default {
   name: "App",
 
   components: {
-    MainBlock,
+    HeaderBlock,
     FieldsOfAppBlock,
     WhyChooseAcrylBlock,
     SoftwareSolutionsBlock,
