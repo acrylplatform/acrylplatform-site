@@ -146,7 +146,7 @@ export default {
       }
       margin: 0 auto;
       .textHeaderBlock {
-        padding: 10px;
+        padding: 10px 0;
         .bodyText {
           text-align: center;
           @include respond-to(large-screens) {
