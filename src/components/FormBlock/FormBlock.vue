@@ -7,7 +7,7 @@
           cols="12"
           offset-sm="5"
           md="3"
-          style="background-color: white; min-width: 364px; min-height: 456px; max-width: 355px; max-height: 528px; border-radius: 12px; margin-top: auto; margin-bottom: auto; margin-left: auto; margin-right: auto;"
+          style="background-color: white; min-width: 304px; min-height: 456px; max-width: 355px; max-height: 528px; border-radius: 12px; margin-top: auto; margin-bottom: auto; margin-left: auto; margin-right: auto;"
         >
           <h2
             class="headSection pb-3 secondaryColor "
@@ -18,19 +18,19 @@
           <div class="maxWidth">
             <v-text-field
               v-model="name"
-              label="Имя"
+              label="Name"
               name="name"
               required
             />
             <v-text-field
               v-model="email"
+              label="E-mail"
               name="email"
-              label="Электронная почта"
               required
             />
             <v-text-field
               v-model="phone"
-              label="Телефон"
+              label="Phone"
               name="phone"
               required
             />
@@ -49,11 +49,13 @@
             <div class="d-flex align-center ">
               <v-btn
                 class="border-radius: 12px;"
+                color="primaryColor"
+                dark
                 block
                 href="#targetSend"
                 @click="formSend()"
               >
-                Отправить
+                SEND
               </v-btn>
             </div>
           </div>
@@ -103,7 +105,7 @@ export default {
   name: "FormBlock",
   data() {
     return {
-      headSection: `Заказать ACRYL Node`,
+      headSection: `Contact us`,
       valid: false,
       name: "",
       phone: "",
@@ -116,10 +118,10 @@ export default {
       errorMessage: "",
       modalTrue: false,
       agreeCheckLabel: `
-                Нажимая кнопку «Отправить», я даю
-                согласие на обработку своих
-                персональных данных в соответствии с
-                <a style="color: #2EA9FB;" href="/privacy">Политикой конфиденциальности</a>.`,
+                By clicking the "Send" button, 
+                I agree to the processing of my personal 
+                data in accordance with the 
+                <a style="color: #2EA9FB;" href="/privacy">Privacy Policy</a>.`,
       agreeCheck: false
     };
   },
@@ -220,7 +222,7 @@ export default {
 }
 
 .imgBlock {
-  background-image: url(/img/form_photo.jpg);
+  background-image: url(/img/form_photo.png);
   width: 100%;
   @include respond-to(medium-screens) {
     max-height: 548px;

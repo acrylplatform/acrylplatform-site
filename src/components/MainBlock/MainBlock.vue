@@ -18,105 +18,14 @@
                   {{ text2 }}
                 </p>
               </div>
-              <v-dialog
-                v-model="dialog"
-                max-width="450"
-                class="popup"
-              >
-                <template #activator="{ on }">
-                  <v-btn
-                    class="contentBtn"
-                    color="primaryColor"
-                    dark
-                    v-on="on"
-                    @click="click_order()"
-                  >
-                    {{ btn }}
-                  </v-btn>
-                </template>
-                <v-container>
-                  <v-row class="popup-block">
-                    <v-col cols="12">
-                      <h4>{{ head4 }}</h4>
-                      <div class="subscription">
-                        <v-text-field
-                          dark
-                          v-model="name"
-                          label="Name"
-                          full-width
-                        />
-                        <v-text-field
-                          dark
-                          v-model="email"
-                          label="E-mail"
-                          full-width
-                        />
-                        <v-text-field
-                          dark
-                          v-model="phone"
-                          label="Phone"
-                          full-width
-                        />
-                        <v-checkbox
-                          dark
-                          v-model="agreeCheck"
-                        >
-                          <template #label>
-                            <span
-                              @click.stop
-                              class="agreeCheckLabel"
-                              v-html="agreeCheckLabel"
-                            />
-                          </template>
-                        </v-checkbox>
-                        <div class="btn">
-                          <v-btn
-                            rounded
-                            color="#FFFFFF primary"
-                            light
-                            @click="formSend()"
-                          >
-                            Связаться с нами
-                          </v-btn>
-                        </div>
-                        <div
-                          class="modalOpen"
-                          v-if="modalTrue"
-                        >
-                          <div class="modalCards">
-                            <v-card
-                              class="modalCard"
-                              max-width="344"
-                              max-height="344"
-                              outlined
-                            >
-                              <p
-                                class="errorMessage"
-                                v-if="errorMessage"
-                              >
-                                {{ errorMessage }}
-                              </p>
-                              <p
-                                class="response"
-                                v-if="response"
-                              >
-                                {{ response }}
-                              </p>
-                              <v-btn
-                                rounded
-                                outlined
-                                @click="reversModal()"
-                              >
-                                Закрыть
-                              </v-btn>
-                            </v-card>
-                          </div>
-                        </div>
-                      </div>
-                    </v-col>
-                  </v-row>
-                </v-container>
-              </v-dialog>
+                <v-btn
+                  class="contentBtn"
+                  color="primaryColor"
+                  dark
+                  href="#targetOffer" 
+                >
+                  {{ btn }}
+                </v-btn>
             </div>
           </v-col>
         </v-row>
@@ -131,89 +40,11 @@ export default {
   name: "HeaderBlock",
   data() {
     return {
-      head: "Решение проблем бизнеса",
       text1: `ACRYL Platfotm`,
       text2: `Open-source blockchain platform that develops high-tech and easy-to-integrate solutions for business issues`,
       btn: `LEARN MORE`,
-      absolute: true,
-      overlay: false,
-      name: "",
-      email: "",
-      phone: "",
-      response: "",
-      modalTrue: false,
-      head4: "Узнайте, как применить блокчейн в вашем бизнесе",
-      agreeCheckLabel: `
-            Нажимая кнопку "Связаться с нами", я даю
-            согласие на обработку своих
-            персональных данных в соответствии с
-            <a href="/privacy" style="color: #2EA9FB;">Политикой конфиденциальности</a>, а также
-            соглашаюсь получать информацию о
-            скидках и специальных предложениях на
-            указанный e-mail и телефон.`,
-      agreeCheck: false,
-      dialog: false
     };
   },
-  methods: {
-    formSend: function() {
-      if (!this.agreeCheck) {
-        this.modalTrue = true;
-        this.errorMessage =
-          "Вы не согласились с обработкой персональных данных";
-      } else {
-        this.Submit_order();
-        // if (this.name == '' || this.phone == '' || this.email == '') {
-        //     // console.log("Запони все поля")
-        //     this.errorMessage = 'Заполните все поля'
-        //     this.response = ''
-        //     this.modalTrue = true;
-        // } else {
-        let formData = new FormData();
-        formData.append("fields[name_1]", this.name);
-        formData.append("fields[543953_1][907777]", this.phone);
-        formData.append("fields[543955_1][907789]", this.email);
-        formData.append("form_id", "589840");
-        formData.append("hash", "65d12632c23908dd5d503e1efe6733c3");
-        axios
-          .post("https://forms.amocrm.ru/queue/add", formData, {})
-          .then(response => {
-            console.log("response", response);
-            this.errorMessage = "";
-            this.response = "Мы с вами свяжемся в ближайшее время";
-            this.modalTrue = true;
-            this.name = "";
-            this.phone = "";
-            this.email = "";
-          })
-          .catch(error => {
-            console.log(error);
-            this.errorMessage = "";
-            this.response = "Мы с вами свяжемся в ближайшее время";
-            this.modalTrue = true;
-            this.name = "";
-            this.phone = "";
-            this.email = "";
-          });
-        // }
-      }
-    },
-    reversModal: function() {
-      this.modalTrue = !this.modalTrue;
-      this.errorMessage = "";
-      this.response = "";
-    },
-    Submit_order() {
-      // console.log("Submit_order");
-      window.gaSendButton("Submit_order");
-      window.yaSendButton("Submit_order");
-    },
-    click_order() {
-      // console.log("Click_order");
-      window.gaSendButton("Click_order");
-      window.yaSendButton("Click_order");
-    }
-  }
 };
 </script>
 
