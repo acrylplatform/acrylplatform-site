@@ -1,7 +1,7 @@
 <template>
   <div class="sectionPage">
     <h2>{{ text.ru.head }}</h2>
-    <p><span v-html="text.ru.paragraphs" /></p>
+    <p><span v-html="text.en.paragraphs" /></p>
   </div>
 </template>
 
