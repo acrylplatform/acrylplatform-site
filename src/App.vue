@@ -65,11 +65,11 @@
               <v-list-item-content>
                 <v-list-item-title class="title">
                   <v-btn
-                    rounded
-                    small
+                    color="primaryColor"
+                    dark
                     href="#targetOffer"
                   >
-                    Заказать
+                    LEARN MORE
                   </v-btn>
                 </v-list-item-title>
               </v-list-item-content>
@@ -185,7 +185,7 @@ export default {
   }
 }
 .logotype {
-  width: 120px;
+  width: 109px;
   margin: 0;
   padding: 0;
   img {
