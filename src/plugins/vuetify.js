@@ -13,7 +13,7 @@ export default new Vuetify({
         secondary: "#3C3C40",
         onSecondary: "#1f1f20",
         error: "#e60d2e",
-        onError: "e60d2e",
+        onError: "#e60d2e",
         surface: "#ffffff",
         onSurface: "#1f1f20",
         secondSurface: "#3C3C40",
