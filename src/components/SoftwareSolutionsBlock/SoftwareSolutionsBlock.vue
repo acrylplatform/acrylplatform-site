@@ -16,10 +16,11 @@
           md="4"
           class="blockContent"
         >
-          <img
-            class="block_img"
-            :src="`/img/imgComponents/SoftwareSolutionsBlock/${item.icon}.png`"
-          >
+          <div class="block_img">
+            <v-img
+              :src="`/img/imgComponents/SoftwareSolutionsBlock/${item.icon}.png`"
+            />
+          </div>
           <div>
             <h3
               class="blockHeader"
@@ -38,10 +39,11 @@
           md="4"
           class="blockContent"
         >
-          <img
-            class="block_img"
-            :src="`/img/imgComponents/SoftwareSolutionsBlock/${item.icon}.png`"
-          >
+          <div class="block_img">
+            <v-img
+              :src="`/img/imgComponents/SoftwareSolutionsBlock/${item.icon}.png`"
+            />
+          </div>
           <div>
             <h3
               class="blockHeader"
@@ -52,7 +54,7 @@
               v-html="item.text"
             />
           </div>
-        </v-col>
+        </v-col> 
         <v-col
           v-for="item in column3"
           :key="`SoftwareSolutionsBlock-item_${item.id}`"
@@ -60,10 +62,11 @@
           md="4"
           class="blockContent"
         >
-          <img
-            class="block_img"
-            :src="`/img/imgComponents/SoftwareSolutionsBlock/${item.icon}.png`"
-          >
+          <div class="block_img">
+            <v-img
+              :src="`/img/imgComponents/SoftwareSolutionsBlock/${item.icon}.png`"
+            />
+          </div>
           <div>
             <h3
               class="blockHeader"
@@ -113,6 +116,15 @@ export default {
   .software-solution-block{
     .blockContent{
       display: flex;
+      .block_img{
+        width:67px;
+        height: 67px;
+        margin-right: 20px;
+        @include respond-to(medium-screens) {
+          width: 100px;
+          height: 100px;
+        }
+      }
       .blockHeader{
         font-family: Montserrat;
         font-style: normal;
@@ -127,15 +139,6 @@ export default {
         font-weight: 300;
         font-size: 14px;
         line-height: 17px;
-      }
-      img.block_img{
-        width:67px;
-        height: 67px;
-        margin-right: 20px;
-        @include respond-to(medium-screens) {
-          width: 100px;
-          height: 100px;
-        }
       }
     }
   }
