@@ -105,13 +105,13 @@
               </template>
             </v-checkbox>
             <v-btn
-              rounded
               outlined
               href="#targetSubscription"
               dark
+              class="mx-auto"
               @click="formSubSend()"
             >
-              Подписаться
+              SUBSCRIBE
             </v-btn>
           </div>
         </v-col>
@@ -184,7 +184,7 @@
                     class="tooltipSpan"
                     style="color: #2EA9FB;"
                     v-on="on"
-                  >Все права защищены, 18+</span>
+                  >All rights reserved, 18+</span>
                 </template>
                 <span>
                   Все материалы данного сайта являются объектами авторского
@@ -248,7 +248,7 @@ export default {
   },
   data() {
     return {
-      head1: "Направления",
+      head1: "Directions",
       directions: [
         {
           id: 1,
@@ -275,9 +275,9 @@ export default {
           click: "Submit_Enterprise"
         }
       ],
-      head2: "Меню",
-      head3: "Контакты",
-      head4: "Подписывайтесь на обновления",
+      head2: "Menu",
+      head3: "Contacts",
+      head4: "Subscribe",
       iconItems: [
         {
           id: 1,
@@ -318,13 +318,11 @@ export default {
       ],
       email: "",
       agreeCheckLabel: `
-            Нажимая кнопку «Подписаться», я даю
-            согласие на обработку своих
-            персональных данных в соответствии с
-            <a href="/privacy" style="color: #2EA9FB;">Политикой конфиденциальности</a>, а также
-            соглашаюсь получать информацию о
-            специальных предложениях на
-            указанный e-mail и телефон.`,
+            By clicking the "Subscribe" button I agree 
+            to the processing of my personal data in accordance with the 
+            <a href="/privacy" style="color: #2EA9FB;">Privacy Policy</a>, а также
+            and to receive information about special 
+            offers on the specified e-mail and phone.`,
       agreeCheck: false,
       modalTrue: false,
       textError: ""
@@ -571,6 +569,13 @@ export default {
   .subscription {
     margin: 20px 0;
     max-width: 300px;
+    display: flex;
+    justify-content: center;
+    // align-content: center;
+    flex-direction: column;
+    @include respond-to(large-screens) {
+     justify-content: flex-start;
+    }
     .v-input {
       margin: 0;
       padding: 0;

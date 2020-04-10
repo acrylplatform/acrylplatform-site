@@ -141,13 +141,11 @@ export default {
       ],
       drawer: false,
       addressItems: {
-        city: "г.Новосибирск",
-        address: "ул. Фабричная 17/4 (12,13 этаж)",
-        number: "8 (800) 511-3715",
-        numberLink: "88005113715",
+        city: "17/4, Fabrichnaya st. (12-13 fl.),",
+        address: "Novosibirsk, 630007, Russia",
+        number: "+7 (800) 511-37-15",
+        numberLink: "+78005113715",
         email: "sales@acrylplatform.com",
-        support: "Поддержка:",
-        emailsupport: "support@acrylplatform.com"
       }
     };
   },
