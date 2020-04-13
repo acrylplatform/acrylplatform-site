@@ -63,7 +63,6 @@ export default {
   methods: {
     checkActiveCard: function (id) {
       this.cardActive = id;
-      console.log("click on: ", this.cardActive);
     }
   }
 };
