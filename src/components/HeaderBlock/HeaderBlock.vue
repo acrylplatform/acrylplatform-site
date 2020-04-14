@@ -22,7 +22,7 @@
                 class="contentBtn"
                 color="primaryColor"
                 dark
-                @click="$emit('switch-lang', 'en')"
+                href="#targetOffer"
               >
                 {{ $t('header.subscribeBtn') }}
               </v-btn>
