@@ -48,6 +48,22 @@
                 @click="Submit_tel1()"
               >+7 (800) 511-37-15</a>
             </div>
+            <div class="d-flex align-center pr-3">
+              <a
+                class="elHover"
+                @click="$emit('switchLang', 'en')"
+              >
+                En
+              </a>
+            </div>
+            <div class="d-flex align-center pr-3">
+              <a
+                class="elHover"
+                @click="$emit('switchLang', 'ru')"
+              >
+                Ru
+              </a>
+            </div>
           </v-toolbar-items>
         </div>
         <v-app-bar-nav-icon

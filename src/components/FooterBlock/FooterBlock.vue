@@ -11,10 +11,10 @@
           lg="3"
           class="marwieght"
         >
-          <h4>{{ head1 }}</h4>
+          <h4>{{ $t('footerBlock.head1') }}</h4>
           <div class="directions">
             <a
-              v-for="(direction, i) in directions"
+              v-for="(direction, i) in $t('footerBlock.directions')"
               :key="`direction${i}`"
               :href="`${direction.link}`"
               target="_blank"
@@ -29,7 +29,7 @@
           sm="6"
           lg="3"
         >
-          <h4>{{ head2 }}</h4>
+          <h4>{{ $t('footerBlock.head2') }}</h4>
           <div class="menu">
             <a
               v-for="(menuItem, i) in footerItems"
@@ -47,7 +47,7 @@
           sm="6"
           lg="3"
         >
-          <h4>{{ head3 }}</h4>
+          <h4>{{ $t('footerBlock.head3') }}</h4>
           <div class="address">
             <p>
               <b><a
@@ -83,12 +83,12 @@
           sm="6"
           lg="3"
         >
-          <h4>{{ head4 }}</h4>
+          <h4>{{ $t('footerBlock.head4') }}</h4>
           <div class="subscription">
             <v-text-field
               dark
               v-model="email"
-              label="E-mail"
+              :label="$t('footerBlock.email')"
               required
             />
             <v-checkbox
@@ -100,7 +100,7 @@
                 <span
                   @click.stop
                   class="agreeCheckLabel"
-                  v-html="agreeCheckLabel"
+                  v-html="$t('footerBlock.agreeCheckLabel')"
                 />
               </template>
             </v-checkbox>
@@ -110,7 +110,7 @@
               dark
               @click="formSubSend()"
             >
-              SUBSCRIBE
+              {{ $t('footerBlock.subscribeBtn') }}
             </v-btn>
           </div>
         </v-col>
@@ -151,7 +151,7 @@
         >
           <div class="social">
             <a
-              v-for="(item, i) in iconItems"
+              v-for="(item, i) in $t('footerBlock.iconItems')"
               :key="`iconSocial${i}`"
               :href="`${item.link}`"
               target="_blank"
@@ -183,7 +183,7 @@
                     class="tooltipSpan"
                     style="color: #2EA9FB;"
                     v-on="on"
-                  >All rights reserved, 18+</span>
+                  >{{ $t('footerBlock.rules') }}</span>
                 </template>
                 <span>
                   Все материалы данного сайта являются объектами авторского
@@ -247,81 +247,7 @@ export default {
   },
   data() {
     return {
-      head1: "Directions",
-      directions: [
-        {
-          id: 1,
-          img: "Logo_ACRYL_Node",
-          link: "https://node.acrylplatform.com/",
-          click: "Submit_platform"
-        },
-        {
-          id: 2,
-          img: "Logo_ACRYL_1C_Integration",
-          link: "https://1c.acrylplatform.com/",
-          click: "Submit_1c"
-        },
-        {
-          id: 3,
-          img: "Logo_ACRYL_CDN",
-          link: "https://cdn.acrylplatform.com/",
-          click: "Submit_CDN"
-        },
-        {
-          id: 4,
-          img: "Logo_ACRYL_Enterprise",
-          link: "https://enterprise.acrylplatform.com/",
-          click: "Submit_Enterprise"
-        }
-      ],
-      head2: "Menu",
-      head3: "Contacts",
-      head4: "Subscribe",
-      iconItems: [
-        {
-          id: 1,
-          icon: "ins",
-          link: "https://www.instagram.com/acrylplatformofficial/",
-          click: "Submit_IG"
-        },
-        {
-          id: 2,
-          icon: "fb",
-          link: "https://www.facebook.com/acrylplatformofficial",
-          click: "Submit_FB"
-        },
-        {
-          id: 3,
-          icon: "tw",
-          link: "https://twitter.com/acrylplatform",
-          click: "Submit_TW"
-        },
-        {
-          id: 4,
-          icon: "vk",
-          link: "https://vk.com/acrylplatform",
-          click: "Submit_VK"
-        },
-        {
-          id: 5,
-          icon: "tg",
-          link: "https://t.me/Acrylplatform",
-          click: "Submit_TG"
-        },
-        {
-          id: 6,
-          icon: "gh",
-          link: "https://github.com/acrylplatform",
-          click: "Submit_github"
-        }
-      ],
       email: "",
-      agreeCheckLabel: `
-        By clicking the "Subscribe" button I agree
-        to the processing of my personal data in accordance with the
-        <a href="/privacy" style="color: #2EA9FB;">Privacy Policy</a>, а также
-        and to receive information about special
-        offers on the specified e-mail and phone.`,
       agreeCheck: false,
       modalTrue: false,
       textError: ""
