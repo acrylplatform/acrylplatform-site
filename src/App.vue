@@ -74,6 +74,22 @@
                 </v-list-item-title>
               </v-list-item-content>
             </v-list-item>
+            <v-list-item>
+              <v-list-item-content>
+                <v-list-item-title class="title d-flex">
+                  <div class="d-flex align-center pr-3">
+                    <a class="elHover" @click="switchLang('en')">
+                      En
+                    </a>
+                  </div>
+                  <div class="d-flex align-center pr-3">
+                    <a class="elHover" @click="switchLang('ru')">
+                      Ru
+                    </a>
+                  </div>
+                </v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
           </div>
         </div>
       </div>
@@ -82,6 +98,7 @@
     <app-header
       :menu-items="menuItems"
       @changeDrawer="changeDrawerReverse"
+      @switchLang="switchLang"
     />
 
     <!-- PAGES BLOCKS  -->
@@ -97,13 +114,9 @@
 <script>
 import AppHeader from "@/components/AppHeader/AppHeader";
 import FooterBlock from "@/components/FooterBlock/FooterBlock";
-import locale from "../src/components/constants/locale";
+
 export default {
   name: "App",
-  i18n: {
-    messages: {},
-    sharedMessages: locale
-  },
   components: {
     AppHeader,
     FooterBlock
@@ -140,13 +153,6 @@ export default {
           target: "_blank",
           click: "Sublit_Blog1"
         },
-        {
-          id: 5,
-          text: "English",
-          link: "#",
-          target: "_self",
-          click: "$emit('switch-lang', 'en')"
-        }
         // {id: 5, text: "Контакты", link: "#contacts", target: "_self", click: "Click_contact"}
       ],
       drawer: false,
@@ -169,8 +175,7 @@ export default {
       this.drawer = !this.drawer;
     },
     switchLang: function(lang) {
-      console.log('asdsad')
-      this.$emit('switch-lang', lang)
+      this.$i18n.locale = lang
     }
   }
 };

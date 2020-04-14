@@ -7,7 +7,7 @@ import MainPage from "@/pages/MainPage";
 import PrivacyPage from "@/pages/PrivacyPage";
 import CookiesPage from "@/pages/CookiesPage";
 import VueI18n from 'vue-i18n'
-
+import locale from "../src/components/constants/locale";
 
 Vue.use(VueRouter);
 Vue.use(VueI18n);
@@ -15,7 +15,7 @@ Vue.use(VueI18n);
 Vue.config.productionTip = false;
 
 const routes = [
-  { path: "/", component: MainPage, props: {switchLang: (lang)=> this.$i18n.locale = lang}},
+  { path: "/", component: MainPage},
   { path: "/privacy", component: PrivacyPage },
   { path: "/cookie", component: CookiesPage }
 ];
@@ -26,40 +26,17 @@ const router = new VueRouter({
 });
 
 new Vue({
-  vuetify,
-  router,
-  i18n: {
+    vuetify,
+    router,
+    i18n: {
+      messages: {},
+      sharedMessages: locale,
       locale: 'en'
-  },
-  components: { App },
-  created: function () {
+    },
+    created: function () {
       if (navigator.language.includes('ru')) {
           this.$i18n.locale = 'ru'
       }
-  },
-  methods: {
-    switchLang: function(lang) {
-        this.$i18n.locale = lang
-    }
-  },
-  render: h => h(App)
+    },
+    render: h => h(App)
 }).$mount("#app");
-
-// new Vue({
-//   el: '#app',
-//   template: '<App v-on:switch-lang="switchLang"/>',
-//   i18n: {
-//       locale: 'en'
-//   },
-//   components: { App },
-//   created: function () {
-//       if (navigator.language.includes('ru')) {
-//           this.$i18n.locale = 'ru'
-//       }
-//   },
-//   methods: {
-//       switchLang: function(lang) {
-//           this.$i18n.locale = lang
-//       }
-//   }
-// })
