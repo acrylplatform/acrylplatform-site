@@ -4,13 +4,14 @@
       <v-row>
         <v-col cols="12">
           <h2 class="headSection pb-3 secondaryColor">
-            {{ headSection }}
+            <!-- {{ headSection }} -->
+            {{ $t('fieldsOfAppliaction.head') }}
           </h2>
         </v-col>
       </v-row>
       <v-row>
         <v-col
-          v-for="card in blocks"
+          v-for="card in $t('fieldsOfAppliaction.blocks')"
           :key="`FieldsOfAppBlock-card_${card.id}`"
           cols="12"
           md="3"
@@ -38,19 +39,13 @@
 </template>
 
 <script>
+import locale from "../constants/locale";
 export default {
   name: "FieldsOfAppBlock",
-  data() {
-    return {
-      headSection: "Fields of applications",
-      blocks: [
-        {id: 0, header: "Distributed data storage", icon: "sphere_1"},
-        {id: 1, header: "Digital assets", icon: "sphere_2"},
-        {id: 2, header: "The real economy and public administration", icon: "sphere_3"},
-        {id: 3, header: "The online formation of an audit trail for any business branch", icon: "sphere_4"}
-      ]
-    }
-  }
+  i18n: {
+    messages: {},
+    sharedMessages: locale
+  },
 };
 </script>
 

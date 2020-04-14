@@ -54,9 +54,9 @@
               <v-list-item-content>
                 <v-list-item-title class="title">
                   <a
-                    :href="`tel:${addressItems.numberLink}`"
+                    :href="`tel:${$t('addressItems.numberLink')}`"
                     class="noDecoration secondaryColor"
-                  >{{ addressItems.number }}</a>
+                  >{{ $t('addressItems.number') }}</a>
                 </v-list-item-title>
               </v-list-item-content>
             </v-list-item>
@@ -89,7 +89,7 @@
 
     <footer-block
       :footer-items="menuItems"
-      :address-items="addressItems"
+      :address-items="$t('addressItems')"
     />
   </v-app>
 </template>
@@ -97,10 +97,13 @@
 <script>
 import AppHeader from "@/components/AppHeader/AppHeader";
 import FooterBlock from "@/components/FooterBlock/FooterBlock";
-
+import locale from "../src/components/constants/locale";
 export default {
   name: "App",
-
+  i18n: {
+    messages: {},
+    sharedMessages: locale
+  },
   components: {
     AppHeader,
     FooterBlock
@@ -136,6 +139,13 @@ export default {
           link: "https://medium.com/acrylplatform",
           target: "_blank",
           click: "Sublit_Blog1"
+        },
+        {
+          id: 5,
+          text: "English",
+          link: "#",
+          target: "_self",
+          click: "$emit('switch-lang', 'en')"
         }
         // {id: 5, text: "Контакты", link: "#contacts", target: "_self", click: "Click_contact"}
       ],
@@ -157,6 +167,10 @@ export default {
   methods: {
     changeDrawerReverse() {
       this.drawer = !this.drawer;
+    },
+    switchLang: function(lang) {
+      console.log('asdsad')
+      this.$emit('switch-lang', lang)
     }
   }
 };

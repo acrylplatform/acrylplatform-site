@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header-block />
+    <header-block v-on:switch-lang="switchLang"/>
     <fields-of-app-block />
     <why-choose-acryl-block />
     <software-solutions-block />
@@ -39,6 +39,11 @@ export default {
         email: "sales@acrylplatform.com"
       }
     };
+  },
+  methods: {
+    switchLang: function(lang) {
+        this.$emit('switch-lang', lang)
+    }
   }
 };
 </script>

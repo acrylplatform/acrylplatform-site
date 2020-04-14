@@ -12,19 +12,19 @@
             <div class="btnHeaderBlock">
               <div class="textHeaderBlock">
                 <p class="headText">
-                  {{ text1 }}
+                  {{ $t('header.head') }}
                 </p>
                 <p class="bodyText">
-                  {{ text2 }}
+                  {{ $t('header.bodyText') }}
                 </p>
               </div>
               <v-btn
                 class="contentBtn"
                 color="primaryColor"
                 dark
-                href="#targetOffer"
+                @click="$emit('switch-lang', 'en')"
               >
-                {{ btn }}
+                {{ $t('header.subscribeBtn') }}
               </v-btn>
             </div>
           </v-col>
@@ -36,15 +36,18 @@
 
 <script>
 import axios from "axios";
+import locale from "../constants/locale";
 export default {
   name: "HeaderBlock",
-  data() {
-    return {
-      text1: `ACRYL Platfotm`,
-      text2: `Open-source blockchain platform that develops high-tech and easy-to-integrate solutions for business issues`,
-      btn: `LEARN MORE`,
-    };
+  i18n: {
+    messages: {},
+    sharedMessages: locale
   },
+  // methods: {
+  //   switchLang: function(lang) {
+  //       this.$emit('switch-lang', lang)
+  //   }
+  // }
 };
 </script>
 

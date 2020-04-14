@@ -4,13 +4,13 @@
       <v-row>
         <v-col cols="12">
           <h2 class="headSection secondaryColor">
-            {{ headSection }}
+            {{ $t('readySolutions.head') }}
           </h2>
         </v-col>
       </v-row>
       <v-row>
         <v-col
-          v-for="item in blocks"
+          v-for="item in $t('readySolutions.blocks')"
           :key="`ReadySolutionsBlock_${item.id}`"
           cols="12"
           lg="4"
@@ -28,18 +28,13 @@
 </template>
 
 <script>
+import locale from "../constants/locale";
 export default {
   name: "ReadySolutionsBlock",
-  data() {
-    return {
-      headSection: "Ready solutions",
-      blocks:[
-        {id:0, icon:"node", link:"https://node.acrylplatform.com"},
-        {id:1, icon:"1c", link:"https://1c.acrylplatform.com/"},
-        {id:2, icon:"cdn", link:"https://cdn.acrylplatform.com/"}
-      ]
-    }
-  }
+  i18n: {
+    messages: {},
+    sharedMessages: locale
+  },
 };
 </script>
 

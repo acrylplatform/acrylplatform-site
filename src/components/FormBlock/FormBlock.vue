@@ -13,24 +13,24 @@
             class="headSection pb-3 secondaryColor "
             align="center"
           >
-            {{ headSection }}
+            {{ $t('formBlock.head') }}
           </h2>
           <div class="maxWidth">
             <v-text-field
               v-model="name"
-              label="Name"
+              :label="$t('formBlock.name')"
               name="name"
               required
             />
             <v-text-field
               v-model="email"
-              label="E-mail"
+              :label="$t('formBlock.mail')"
               name="email"
               required
             />
             <v-text-field
               v-model="phone"
-              label="Phone"
+              :label="$t('formBlock.phone')"
               name="phone"
               required
             />
@@ -42,7 +42,7 @@
                 <span
                   @click.stop
                   class="agreeCheckLabel"
-                  v-html="agreeCheckLabel"
+                  v-html="$t('formBlock.agreeCheckLabel')"
                 />
               </template>
             </v-checkbox>
@@ -55,7 +55,7 @@
                 href="#targetSend"
                 @click="formSend()"
               >
-                SEND
+                {{ $t('formBlock.head') }}
               </v-btn>
             </div>
           </div>
@@ -100,12 +100,15 @@
 
 <script>
 import axios from "axios";
-
+import locale from "../constants/locale";
 export default {
   name: "FormBlock",
+    i18n: {
+    messages: {},
+    sharedMessages: locale
+  },
   data() {
     return {
-      headSection: `Contact us`,
       valid: false,
       name: "",
       phone: "",
@@ -117,11 +120,6 @@ export default {
       response: "",
       errorMessage: "",
       modalTrue: false,
-      agreeCheckLabel: `
-                By clicking the "Send" button,
-                I agree to the processing of my personal
-                data in accordance with the
-                <a style="color: #2EA9FB;" href="/privacy">Privacy Policy</a>.`,
       agreeCheck: false
     };
   },
