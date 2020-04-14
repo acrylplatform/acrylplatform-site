@@ -4,7 +4,6 @@
       <v-row>
         <v-col cols="12">
           <h2 class="headSection pb-3 secondaryColor">
-            <!-- {{ headSection }} -->
             {{ $t('fieldsOfAppliaction.head') }}
           </h2>
         </v-col>

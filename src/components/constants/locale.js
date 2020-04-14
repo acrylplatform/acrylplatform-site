@@ -176,7 +176,6 @@ export default{
           target: "_blank",
           click: "Sublit_Blog1"
         }
-        // {id: 5, text: "Контакты", link: "#contacts", target: "_self", click: "Click_contact"}
       ],
     },
     en:{
@@ -311,7 +310,7 @@ export default{
               }
             ],
             subscribeBtn:"SUBSCRIBE",
-            email: "",
+            email: "E-mail",
             agreeCheckLabel: `
               By clicking the "Subscribe" button I agree
               to the processing of my personal data in accordance with the
@@ -359,7 +358,6 @@ export default{
               target: "_blank",
               click: "Sublit_Blog1"
             }
-            // {id: 5, text: "Контакты", link: "#contacts", target: "_self", click: "Click_contact"}
           ],
     }
 }

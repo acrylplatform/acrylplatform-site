@@ -14,11 +14,6 @@
         class="elHover"
       >{{ item.text }}</a>
     </div>
-    <!-- <a class="elHover" href="#" @click="$emit('switch-lang', 'en')" v-if="this.$i18n.locale == 'ru'">English</a>
-    <a class="elHover" href="#" @click="$emit('switch-lang', 'ru')" v-else>Russian</a> -->
-    <div>
-    <!-- <a>asdsad</a> -->
-    </div>
   </v-navigation-drawer>
 </template>
 

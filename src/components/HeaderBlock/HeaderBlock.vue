@@ -43,11 +43,6 @@ export default {
     messages: {},
     sharedMessages: locale
   },
-  // methods: {
-  //   switchLang: function(lang) {
-  //       this.$emit('switch-lang', lang)
-  //   }
-  // }
 };
 </script>
 
