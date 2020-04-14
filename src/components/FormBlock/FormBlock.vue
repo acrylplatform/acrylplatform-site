@@ -100,13 +100,8 @@
 
 <script>
 import axios from "axios";
-import locale from "../constants/locale";
 export default {
   name: "FormBlock",
-    i18n: {
-    messages: {},
-    sharedMessages: locale
-  },
   data() {
     return {
       valid: false,

@@ -31,7 +31,7 @@ new Vue({
     i18n: {
       messages: {},
       sharedMessages: locale,
-      locale: 'en'
+      locale: 'ru'
     },
     created: function () {
       if (navigator.language.includes('ru')) {

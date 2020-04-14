@@ -227,14 +227,9 @@
 
 <script>
 import axios from "axios";
-import locale from "../constants/locale";
 
 export default {
   name: "FooterBlock",
-  i18n: {
-    messages: {},
-    sharedMessages: locale
-  },
   props: {
     footerItems: {
       type: Array,

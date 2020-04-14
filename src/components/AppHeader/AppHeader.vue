@@ -49,12 +49,18 @@
               >+7 (800) 511-37-15</a>
             </div>
             <div class="d-flex align-center pr-3">
-              <a class="elHover" @click="$emit('switchLang', 'en')">
+              <a
+                class="elHover"
+                @click="$emit('switchLang', 'en')"
+              >
                 En
               </a>
             </div>
             <div class="d-flex align-center pr-3">
-              <a class="elHover" @click="$emit('switchLang', 'ru')">
+              <a
+                class="elHover"
+                @click="$emit('switchLang', 'ru')"
+              >
                 Ru
               </a>
             </div>

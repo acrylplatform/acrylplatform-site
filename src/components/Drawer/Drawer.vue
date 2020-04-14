@@ -18,7 +18,6 @@
 </template>
 
 <script>
-import locale from "../constansts/locale.js";
 export default {
   name: "Drawer",
   props: {
@@ -26,10 +25,6 @@ export default {
       type: Array,
       default: null
     }
-  },
-  i18n: {
-      messages: {},
-      sharedMessages: locale
   },
   computed: {
     getmenuItems() {

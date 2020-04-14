@@ -78,12 +78,18 @@
               <v-list-item-content>
                 <v-list-item-title class="title d-flex">
                   <div class="d-flex align-center pr-3">
-                    <a class="elHover" @click="switchLang('en')">
+                    <a
+                      class="elHover"
+                      @click="switchLang('en')"
+                    >
                       En
                     </a>
                   </div>
                   <div class="d-flex align-center pr-3">
-                    <a class="elHover" @click="switchLang('ru')">
+                    <a
+                      class="elHover"
+                      @click="switchLang('ru')"
+                    >
                       Ru
                     </a>
                   </div>

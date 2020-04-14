@@ -36,13 +36,8 @@
 
 <script>
 import axios from "axios";
-import locale from "../constants/locale";
 export default {
   name: "HeaderBlock",
-  i18n: {
-    messages: {},
-    sharedMessages: locale
-  },
 };
 </script>
 
@@ -119,9 +114,6 @@ export default {
     max-width: 1200px;
     margin: 0 auto;
     align-items: center;
-    // @include respond-to(large-screens) {
-    //   margin-top: -480px;
-    // }
     .logotype_main {
       margin: 40px 10px 30px;
     }

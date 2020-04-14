@@ -85,13 +85,8 @@
 </template>
 
 <script>
-import locale from "../constants/locale";
 export default {
   name: "SoftwareSolutionsBlock",
-  i18n: {
-    messages: {},
-    sharedMessages: locale
-  },
 };
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header-block v-on:switch-lang="switchLang"/>
+    <header-block />
     <fields-of-app-block />
     <why-choose-acryl-block />
     <software-solutions-block />
@@ -40,11 +40,6 @@ export default {
       }
     };
   },
-  methods: {
-    switchLang: function(lang) {
-        this.$emit('switch-lang', lang)
-    }
-  }
 };
 </script>
 

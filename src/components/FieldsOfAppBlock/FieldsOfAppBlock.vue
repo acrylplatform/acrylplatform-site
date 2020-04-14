@@ -38,13 +38,8 @@
 </template>
 
 <script>
-import locale from "../constants/locale";
 export default {
   name: "FieldsOfAppBlock",
-  i18n: {
-    messages: {},
-    sharedMessages: locale
-  },
 };
 </script>
 
