@@ -48,7 +48,23 @@
 
 <script>
 export default {
-  name: "WhyChooseAcrylBlock"
+  name: "WhyChooseAcrylBlock",
+  data() {
+    return {
+      headSection: "Why choose acryl",
+      blocks: [
+        {id: 0, header: "Sustainable network", text: "Сoverage by the regional distribution of the ACRYL Node data centers around the world", icon: "001b"},
+        {id: 1, header: "Modern technologies", text: "Fast (1000 tx/s), secure open-source network. Simple integration and smart contract support", icon: "002b"},
+        {id: 2, header: "Stable value", text: "The price for data recording in the Acryl blockchain is stable and competitive due to constant cost for the Acryl coins", icon: "003b"}
+      ],
+      cardActive: 0
+    }
+  },
+  methods: {
+    checkActiveCard: function (id) {
+      this.cardActive = id;
+    }
+  }
 };
 </script>
 
