@@ -14,7 +14,7 @@
               {{ $t('formBlock.head') }}
             </h2>
           </v-col>
-          <v-col 
+          <v-col
             style="min-width: 304px; max-width: 800px; padding-bottom: 0"
           >
             <div class="fmodel">
@@ -41,7 +41,7 @@
               />
             </div>
           </v-col>
-          <v-col 
+          <v-col
             class="checkBlock"
           >
             <v-checkbox
@@ -195,14 +195,8 @@ export default {
 
 .imgBlock {
   width: 100%;
-  @include respond-to(medium-screens) {
-    max-height: 548px;
-    min-height: 300px;
-  }
-  height: 100%;
   background-position: top center;
   background-repeat: no-repeat;
-
   .main-block{
     width:100%;
       .formBlock{
@@ -210,7 +204,7 @@ export default {
     flex-direction: column;
     justify-content:center;
     .fmodel{
-      display: flex; 
+      display: flex;
       flex-direction: column;
       justify-content:center;
       @include respond-to(medium-screens) {
