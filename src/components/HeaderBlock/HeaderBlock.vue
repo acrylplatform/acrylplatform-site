@@ -60,7 +60,8 @@ export default {
       height: 480px;
     }
     .imgHeaderBlock {
-      background-image: url(/img/headerImage.svg);
+      // background-image: url(/img/headerImage.svg);
+      background-image: url(/img/imgComponents/HeaderBlock/headerImage.svg);
       background-position: top right 30%;
       background-size: cover;
       background-repeat: no-repeat;
@@ -187,10 +188,6 @@ export default {
 }
 .popup {
   max-width: 450px;
-  .contentBtn {
-    color: aqua !important;
-  }
-  // background-color: $secondaryColor !important;
 }
 .popup-block {
   h4 {
