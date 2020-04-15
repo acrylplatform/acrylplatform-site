@@ -49,6 +49,16 @@
 <script>
 export default {
   name: "WhyChooseAcrylBlock",
+  data() {
+    return {
+      cardActive: 0
+    }
+  },
+  methods: {
+    checkActiveCard: function (id) {
+      this.cardActive = id;
+    }
+  }
 };
 </script>
 
@@ -125,9 +135,9 @@ export default {
           @extend %__generalStyleText;
           font-weight: 300;
           color: $secondaryColor;
-          margin-bottom: -60px;
+          margin-bottom: -100px;
           opacity: 0;
-          height: 65px;
+          height: 100px;
         }
       }
       &:hover {
