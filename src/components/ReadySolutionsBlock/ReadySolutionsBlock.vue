@@ -4,13 +4,13 @@
       <v-row>
         <v-col cols="12">
           <h2 class="headSection secondaryColor">
-            {{ headSection }}
+            {{ $t('readySolutions.head') }}
           </h2>
         </v-col>
       </v-row>
       <v-row>
         <v-col
-          v-for="item in blocks"
+          v-for="item in $t('readySolutions.blocks')"
           :key="`ReadySolutionsBlock_${item.id}`"
           cols="12"
           lg="4"
@@ -19,8 +19,7 @@
             class="mx-auto cardInBlock"                 
             :style="`background-image: url(/img/imgComponents/ReadySolutionsBlock/${item.icon}.png);`"
             :href="`${item.link}`"
-          >
-          </v-card>
+          />
         </v-col>
       </v-row>
     </v-container>
@@ -30,16 +29,6 @@
 <script>
 export default {
   name: "ReadySolutionsBlock",
-  data() {
-    return {
-      headSection: "Ready solutions",
-      blocks:[
-        {id:0, icon:"node", link:"https://node.acrylplatform.com"},
-        {id:1, icon:"1c", link:"https://1c.acrylplatform.com/"},
-        {id:2, icon:"cdn", link:"https://cdn.acrylplatform.com/"}
-      ]
-    }
-  }
 };
 </script>
 

@@ -12,10 +12,10 @@
             <div class="btnHeaderBlock">
               <div class="textHeaderBlock">
                 <p class="headText">
-                  {{ text1 }}
+                  {{ $t('header.head') }}
                 </p>
                 <p class="bodyText">
-                  {{ text2 }}
+                  {{ $t('header.bodyText') }}
                 </p>
               </div>
               <v-btn
@@ -24,7 +24,7 @@
                 dark
                 href="#targetOffer"
               >
-                {{ btn }}
+                {{ $t('header.subscribeBtn') }}
               </v-btn>
             </div>
           </v-col>
@@ -38,13 +38,6 @@
 import axios from "axios";
 export default {
   name: "HeaderBlock",
-  data() {
-    return {
-      text1: `ACRYL Platfotm`,
-      text2: `Open-source blockchain platform that develops high-tech and easy-to-integrate solutions for business issues`,
-      btn: `LEARN MORE`,
-    };
-  },
 };
 </script>
 
@@ -67,7 +60,8 @@ export default {
       height: 480px;
     }
     .imgHeaderBlock {
-      background-image: url(/img/headerImage.svg);
+      // background-image: url(/img/headerImage.svg);
+      background-image: url(/img/imgComponents/HeaderBlock/headerImage.svg);
       background-position: top right 30%;
       background-size: cover;
       background-repeat: no-repeat;
@@ -121,9 +115,6 @@ export default {
     max-width: 1200px;
     margin: 0 auto;
     align-items: center;
-    // @include respond-to(large-screens) {
-    //   margin-top: -480px;
-    // }
     .logotype_main {
       margin: 40px 10px 30px;
     }
@@ -197,10 +188,6 @@ export default {
 }
 .popup {
   max-width: 450px;
-  .contentBtn {
-    color: aqua !important;
-  }
-  // background-color: $secondaryColor !important;
 }
 .popup-block {
   h4 {

@@ -4,13 +4,13 @@
       <v-row>
         <v-col cols="12">
           <h2 class="headSection secondaryColor">
-            {{ headSection }}
+            {{ $t('whyChooseAcryl.head') }}
           </h2>
         </v-col>
       </v-row>
       <v-row :class="`cardActive__number${cardActive}`">
         <v-col
-          v-for="card in blocks"
+          v-for="card in $t('whyChooseAcryl.blocks')"
           :key="`WhyChooseAcrylBlock-card_${card.id}`"
           cols="12"
           md="4"
@@ -48,23 +48,7 @@
 
 <script>
 export default {
-  name: "WhyChooseAcrylBlock",
-  data() {
-    return {
-      headSection: "Why choose acryl",
-      blocks: [
-        {id: 0, header: "Sustainable network", text: "Сoverage by the regional distribution of the ACRYL Node data centers around the world", icon: "001b"},
-        {id: 1, header: "Modern technologies", text: "Fast (1000 tx/s), secure open-source network. Simple integration and smart contract support", icon: "002b"},
-        {id: 2, header: "Stable value", text: "The price for data recording in the Acryl blockchain is stable and competitive due to constant cost for the Acryl coins", icon: "003b"}
-      ],
-      cardActive: 0
-    }
-  },
-  methods: {
-    checkActiveCard: function (id) {
-      this.cardActive = id;
-    }
-  }
+  name: "WhyChooseAcrylBlock"
 };
 </script>
 
