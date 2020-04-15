@@ -105,10 +105,12 @@
               </template>
             </v-checkbox>
             <v-btn
-              outlined
+              
               href="#targetSubscription"
+              color="primaryColor"
               dark
               @click="formSubSend()"
+              class="footerBtn"
             >
               {{ $t('footerBlock.subscribeBtn') }}
             </v-btn>
@@ -511,6 +513,9 @@ export default {
     }
     .fieldSub {
       color: white;
+    }
+    .footerBtn{
+      border: 1px solid white;
     }
   }
   .polit {

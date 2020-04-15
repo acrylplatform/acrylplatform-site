@@ -63,6 +63,28 @@
             <v-divider />
             <v-list-item>
               <v-list-item-content>
+                <v-list-item-title class="title d-flex">
+                  <div class="d-flex align-center pr-3">
+                    <a
+                      class="elHover"
+                      @click="switchLang('ru')"
+                    >
+                      RU
+                    </a>
+                  </div>
+                  <div class="d-flex align-center pr-3">
+                    <a
+                      class="elHover"
+                      @click="switchLang('en')"
+                    >
+                      EN
+                    </a>
+                  </div>
+                </v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-content>
                 <v-list-item-title class="title">
                   <v-btn
                     color="primaryColor"
@@ -71,28 +93,6 @@
                   >
                     LEARN MORE
                   </v-btn>
-                </v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-content>
-                <v-list-item-title class="title d-flex">
-                  <div class="d-flex align-center pr-3">
-                    <a
-                      class="elHover"
-                      @click="switchLang('en')"
-                    >
-                      En
-                    </a>
-                  </div>
-                  <div class="d-flex align-center pr-3">
-                    <a
-                      class="elHover"
-                      @click="switchLang('ru')"
-                    >
-                      Ru
-                    </a>
-                  </div>
                 </v-list-item-title>
               </v-list-item-content>
             </v-list-item>

@@ -51,17 +51,17 @@
             <div class="d-flex align-center pr-3">
               <a
                 class="elHover"
-                @click="$emit('switchLang', 'en')"
+                @click="$emit('switchLang', 'ru')"
               >
-                En
+                RU
               </a>
             </div>
             <div class="d-flex align-center pr-3">
               <a
                 class="elHover"
-                @click="$emit('switchLang', 'ru')"
+                @click="$emit('switchLang', 'en')"
               >
-                Ru
+                EN
               </a>
             </div>
           </v-toolbar-items>

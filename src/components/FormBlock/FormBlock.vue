@@ -1,42 +1,53 @@
 <template>
   <section class="form-block imgBlock">
     <div id="targetOffer" />
-    <v-container>
-      <v-row class="height100">
-        <v-col
-          cols="12"
-          offset-sm="5"
-          md="3"
-          style="background-color: white; min-width: 304px; min-height: 456px; max-width: 355px; max-height: 528px; margin-top: auto; margin-bottom: auto; margin-left: auto; margin-right: auto; padding: 30px;"
+    <div class="mxw1200 main-block">
+      <v-container>
+        <v-row
+          class="formBlock"
         >
-          <h2
-            class="headSection pb-3 secondaryColor "
-            align="center"
+          <v-col>
+            <h2
+              class="headSection pb-3 secondaryColor "
+              align="center"
+            >
+              {{ $t('formBlock.head') }}
+            </h2>
+          </v-col>
+          <v-col 
+            style="min-width: 304px; max-width: 800px; padding-bottom: 0"
           >
-            {{ $t('formBlock.head') }}
-          </h2>
-          <div class="maxWidth">
-            <v-text-field
-              v-model="name"
-              :label="$t('formBlock.name')"
-              name="name"
-              required
-            />
-            <v-text-field
-              v-model="email"
-              :label="$t('formBlock.mail')"
-              name="email"
-              required
-            />
-            <v-text-field
-              v-model="phone"
-              :label="$t('formBlock.phone')"
-              name="phone"
-              required
-            />
+            <div class="fmodel">
+              <v-text-field
+                v-model="name"
+                :label="$t('formBlock.name')"
+                name="name"
+                outlined
+                style="margin: 0 10px;"
+              />
+              <v-text-field
+                v-model="email"
+                :label="$t('formBlock.mail')"
+                name="email"
+                outlined
+                style="margin: 0 10px;"
+              />
+              <v-text-field
+                v-model="phone"
+                :label="$t('formBlock.phone')"
+                name="phone"
+                outlined
+                style="margin: 0 10px;"
+              />
+            </div>
+          </v-col>
+          <v-col 
+            class="checkBlock"
+          >
             <v-checkbox
               v-model="agreeCheck"
               class="CheckBoxUp"
+              style=" padding-right: 10px; padding-left: 10px"
             >
               <template #label>
                 <span
@@ -53,47 +64,13 @@
                 dark
                 block
                 href="#targetSend"
-                @click="formSend()"
               >
                 {{ $t('formBlock.head') }}
               </v-btn>
             </div>
-          </div>
-        </v-col>
-      </v-row>
-    </v-container>
-    <div
-      class="modalOpen"
-      v-if="modalTrue"
-    >
-      <div class="modalCards">
-        <v-card
-          class="modalCard"
-          max-width="344"
-          max-height="344"
-          outlined
-        >
-          <p
-            class="errorMessage"
-            v-if="errorMessage"
-          >
-            {{ errorMessage }}
-          </p>
-          <p
-            class="response"
-            v-if="response"
-          >
-            {{ response }}
-          </p>
-          <v-btn
-            rounded
-            outlined
-            @click="reversModal()"
-          >
-            Close
-          </v-btn>
-        </v-card>
-      </div>
+          </v-col>
+        </v-row>
+      </v-container>
     </div>
   </section>
 </template>
@@ -161,7 +138,6 @@ export default {
             this.phone = "";
             this.email = "";
           });
-        // }
       }
     },
     reversModal: function() {
@@ -191,6 +167,9 @@ export default {
   line-height: 16px;
 }
 .form-block {
+  background-image: url(/img/imgComponents/FormBlock/headerImage.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 100%;
   display: flex;
   padding: 20px 10px;
@@ -215,16 +194,42 @@ export default {
 }
 
 .imgBlock {
-  background-image: url(/img/form_photo.png);
   width: 100%;
   @include respond-to(medium-screens) {
     max-height: 548px;
-    min-height: 548px;
+    min-height: 300px;
   }
   height: 100%;
   background-position: top center;
   background-repeat: no-repeat;
-  //  background-size: cover;
+
+  .main-block{
+    width:100%;
+      .formBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    .fmodel{
+      display: flex; 
+      flex-direction: column;
+      justify-content:center;
+      @include respond-to(medium-screens) {
+        flex-direction: row;
+        margin-left: -10px;
+      }
+    }
+    .checkBlock{
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+      max-width: 600px;
+      padding-top: 0;
+      @include respond-to(medium-screens) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+  }
 }
 
 .modalOpen {
