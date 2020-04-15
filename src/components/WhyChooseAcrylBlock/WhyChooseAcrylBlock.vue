@@ -8,7 +8,7 @@
           </h2>
         </v-col>
       </v-row>
-      <v-row>
+      <v-row :class="`cardActive__number${cardActive}`">
         <v-col
           v-for="card in $t('whyChooseAcryl.blocks')"
           :key="`WhyChooseAcrylBlock-card_${card.id}`"
@@ -16,11 +16,13 @@
           md="4"
         >
           <v-card
+            :id="`cardNumber${card.id}`"
             class="mx-auto cardInBlock"
             min-width="288"
             max-width="411"
             height="180"
             :style="`background-image: url(/img/imgComponents/WhyChooseAcrylBlock/${card.icon}.png);`"
+            @click="checkActiveCard(card.id)"
           >
             <div
               class="yellowBgr"
@@ -47,6 +49,16 @@
 <script>
 export default {
   name: "WhyChooseAcrylBlock",
+  data() {
+    return {
+      cardActive: 0
+    }
+  },
+  methods: {
+    checkActiveCard: function (id) {
+      this.cardActive = id;
+    }
+  }
 };
 </script>
 
@@ -72,8 +84,26 @@ export default {
     margin: 0;
     transition: .5s;
   }
-
   .why-choose-acryl-block{
+    .cardActive__number0 #cardNumber0,
+    .cardActive__number1 #cardNumber1,
+    .cardActive__number2 #cardNumber2 {
+      @include respond-to(specialMobile) {
+        transition: 1s;
+        .yellowBgr{
+          opacity: 1;
+        }
+        p.cardInBlock__header{
+          transition: 1s;
+          color: $secondaryColor;
+        }
+        p.cardInBlock__text {
+          transition: 1s;
+          margin-bottom: 0;
+          opacity: 1;
+        }
+      }
+    }
     .cardInBlock{
       width: 100%;
       height: 100%;
@@ -94,8 +124,8 @@ export default {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
         p.cardInBlock__header{
           @extend %__generalStyleText;
           font-weight: 500;
@@ -105,8 +135,9 @@ export default {
           @extend %__generalStyleText;
           font-weight: 300;
           color: $secondaryColor;
-          margin-bottom: -60px;
+          margin-bottom: -100px;
           opacity: 0;
+          height: 100px;
         }
       }
       &:hover {

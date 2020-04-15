@@ -36,6 +36,9 @@ $body-font-family: 'Montserrat', sans-serif;
     @else if $media == wide-screens {
       @media only screen and (min-width: $large) { @content; }
     }
+    @else if $media == specialMobile {
+      @media (max-width: $medium) { @content; }
+    }
 }
 body{
   font-family: $font-family !important;
