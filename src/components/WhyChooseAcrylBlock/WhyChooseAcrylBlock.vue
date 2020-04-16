@@ -51,6 +51,7 @@ export default {
   name: "WhyChooseAcrylBlock",
   data() {
     return {
+      headSection: "Why choose acryl",
       cardActive: 0
     }
   },
