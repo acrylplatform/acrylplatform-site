@@ -54,13 +54,35 @@
               <v-list-item-content>
                 <v-list-item-title class="title">
                   <a
-                    :href="`tel:${addressItems.numberLink}`"
+                    :href="`tel:${$t('addressItems.numberLink')}`"
                     class="noDecoration secondaryColor"
-                  >{{ addressItems.number }}</a>
+                  >{{ $t('addressItems.number') }}</a>
                 </v-list-item-title>
               </v-list-item-content>
             </v-list-item>
             <v-divider />
+            <v-list-item>
+              <v-list-item-content>
+                <v-list-item-title class="title d-flex">
+                  <div class="d-flex align-center pr-3">
+                    <a
+                      class="elHover"
+                      @click="switchLang('ru')"
+                    >
+                      RU
+                    </a>
+                  </div>
+                  <div class="d-flex align-center pr-3">
+                    <a
+                      class="elHover"
+                      @click="switchLang('en')"
+                    >
+                      EN
+                    </a>
+                  </div>
+                </v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
             <v-list-item>
               <v-list-item-content>
                 <v-list-item-title class="title">
@@ -82,6 +104,7 @@
     <app-header
       :menu-items="menuItems"
       @changeDrawer="changeDrawerReverse"
+      @switchLang="switchLang"
     />
 
     <!-- PAGES BLOCKS  -->
@@ -89,7 +112,7 @@
 
     <footer-block
       :footer-items="menuItems"
-      :address-items="addressItems"
+      :address-items="$t('addressItems')"
     />
   </v-app>
 </template>
@@ -100,7 +123,6 @@ import FooterBlock from "@/components/FooterBlock/FooterBlock";
 
 export default {
   name: "App",
-
   components: {
     AppHeader,
     FooterBlock
@@ -136,7 +158,7 @@ export default {
           link: "https://medium.com/acrylplatform",
           target: "_blank",
           click: "Sublit_Blog1"
-        }
+        },
         // {id: 5, text: "Контакты", link: "#contacts", target: "_self", click: "Click_contact"}
       ],
       drawer: false,
@@ -157,6 +179,9 @@ export default {
   methods: {
     changeDrawerReverse() {
       this.drawer = !this.drawer;
+    },
+    switchLang: function(lang) {
+      this.$i18n.locale = lang
     }
   }
 };

@@ -39,7 +39,7 @@ export default {
         email: "sales@acrylplatform.com"
       }
     };
-  }
+  },
 };
 </script>
 
