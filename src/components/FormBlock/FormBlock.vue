@@ -43,11 +43,11 @@
           </v-col>
           <v-col
             class="checkBlock"
+            cols="12"
           >
             <v-checkbox
               v-model="agreeCheck"
               class="CheckBoxUp"
-              style=" padding-right: 10px; padding-left: 10px"
             >
               <template #label>
                 <span
@@ -65,7 +65,7 @@
                 block
                 href="#targetSend"
               >
-                {{ $t('formBlock.head') }}
+                {{ $t('formBlock.btnText') }}
               </v-btn>
             </div>
           </v-col>
@@ -220,6 +220,14 @@ export default {
       padding-top: 0;
       @include respond-to(medium-screens) {
         flex-direction: row-reverse;
+      }
+      .CheckBoxUp{
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-top: 10px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
       }
     }
   }

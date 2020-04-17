@@ -71,3 +71,12 @@ body{
 .i-header {
   z-index: 22222;
 }
+
+.CheckBoxUp v-input__control{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .v-input__slot{
+    marign-top: 10px;
+  }
+}
