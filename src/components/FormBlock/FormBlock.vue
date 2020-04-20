@@ -113,9 +113,8 @@ export default {
         formData.append("fields[name_1]", this.name);
         formData.append("fields[543953_1][907777]", this.phone);
         formData.append("fields[543955_1][907789]", this.email);
-        formData.append("form_id", "585211");
-        formData.append("hash", "9b47fca870a99ee10cbd330676441105");
-
+        formData.append("form_id", "606424");
+        formData.append("hash", "9dca6b952100937d1cf669c8f56122a7");
         axios
           .post("https://forms.amocrm.ru/queue/add", formData, {})
           .then(response => {
