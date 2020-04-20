@@ -262,7 +262,7 @@ export default {
       if (this.agreeCheck) {
         axios
           .post(
-            "https://docs.google.com/forms/d/e/1FAIpQLSfSqsAZL0CRuD_gkMFBjzkORI7KNZlKj4MUh6QG86jVinu76w/formResponse",
+            "https://docs.google.com/forms/d/e/1FAIpQLSd8dLmjtabrnWIXPyYMTgFKLTNmSy-zIRdFGa6JQBxPrQZxbw/viewform",
             formData,
             {}
           )
