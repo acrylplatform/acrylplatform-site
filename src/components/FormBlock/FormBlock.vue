@@ -63,7 +63,7 @@
                 color="primaryColor"
                 dark
                 block
-                href="#targetSend"
+                @click="formSend"
               >
                 {{ $t('formBlock.btnText') }}
               </v-btn>
