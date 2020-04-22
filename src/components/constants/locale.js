@@ -1,5 +1,6 @@
 export default{
     ru:{
+       lang: 'ru',
        drawer:{},
        header:{
            head:"ACRYL Platfotm",
@@ -138,7 +139,8 @@ export default{
         rules: "Все права защищены, 18+",
         agreeCheck: false,
         modalTrue: false,
-        textError: ""
+        textError: "",
+        formIdSubscribe: "1FAIpQLSd1iMTg152R7Ev_Gh-P2PiLrhPZL0QMGnqOKDplMbTc9SpJlw"
        }, 
        addressItems: {
         city: "г. Новосибирск,",
@@ -274,6 +276,7 @@ export default{
       }
     },
     en:{
+        lang: 'en',
         drawer:{},
         header:{
             head:"ACRYL Platfotm",
@@ -415,7 +418,8 @@ export default{
               rules: "All rights reserved, 18+",
             agreeCheck: false,
             modalTrue: false,
-            textError: ""
+            textError: "",
+            formIdSubscribe: "1FAIpQLSd0WYX5UExZfAkVjy_UYzl70mJClC-NZqgDcPeQlB--n-PXIQ"
         },
         addressItems: {
             city: "17/4, Fabrichnaya st. (12-13 fl.),",

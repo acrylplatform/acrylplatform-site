@@ -63,7 +63,7 @@
                 color="primaryColor"
                 dark
                 block
-                href="#targetSend"
+                @click="formSend"
               >
                 {{ $t('formBlock.btnText') }}
               </v-btn>
@@ -102,7 +102,7 @@ export default {
         this.errorMessage =
           "Вы не согласились с обработкой персональных данных";
       } else {
-        this.Submit_order();
+        // this.Submit_order();
         // if (this.name == '' || this.phone == '' || this.email == '') {
         //     // console.log("Запони все поля")
         //     this.errorMessage = 'Заполните все поля'

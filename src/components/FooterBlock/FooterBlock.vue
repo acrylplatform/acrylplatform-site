@@ -109,7 +109,7 @@
               href="#targetSubscription"
               color="primaryColor"
               dark
-              @click="formSubSend()"
+              @click="formSubSend($t('lang'))"
               class="footerBtn"
             >
               {{ $t('footerBlock.subscribeBtn') }}
@@ -256,13 +256,16 @@ export default {
     };
   },
   methods: {
-    formSubSend: function() {
+    formSubSend: function(lang) {
       let formData = new FormData();
-      formData.append("entry.2123031748", this.email);
+      formData.append("emailAddress", this.email);
+      const url = (lang === 'en') ?
+        "https://docs.google.com/forms/u/0/d/e/1FAIpQLSd0WYX5UExZfAkVjy_UYzl70mJClC-NZqgDcPeQlB--n-PXIQ/formResponse" :
+        "https://docs.google.com/forms/u/0/d/e/1FAIpQLSd1iMTg152R7Ev_Gh-P2PiLrhPZL0QMGnqOKDplMbTc9SpJlw/formResponse";
+
       if (this.agreeCheck) {
         axios
-          .post(
-            "https://docs.google.com/forms/d/e/1FAIpQLSd8dLmjtabrnWIXPyYMTgFKLTNmSy-zIRdFGa6JQBxPrQZxbw/viewform",
+          .post(url,
             formData,
             {}
           )
