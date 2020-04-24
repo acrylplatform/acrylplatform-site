@@ -57,6 +57,7 @@ export default {
       padding-left: 15px;
       padding-right: 15px;
       transition: 1s;
+      background-color: #fbfbfb;
       &:hover {
         transition: 1s;
         background-color: $yellowBgr;

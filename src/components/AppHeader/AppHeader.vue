@@ -140,9 +140,12 @@ export default {
   text-decoration: none;
   vertical-align: middle;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 17px;
   font-style: normal;
   letter-spacing: 1px;
 }
+  .elHover:hover {
+    text-decoration: underline;
+  }
 </style>
