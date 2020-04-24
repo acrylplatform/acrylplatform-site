@@ -72,6 +72,10 @@ body{
   z-index: 22222;
 }
 
+.CheckBoxUp .v-input__control .v-input__slot{
+  align-items: flex-start !important;
+}
+
 .CheckBoxUp v-input__control{
   display: flex;
   justify-content: center;
