@@ -19,12 +19,22 @@
           >
             <div class="fmodel">
               <v-text-field
-                v-model="name"
-                :label="$t('formBlock.name')"
-                name="name"
-                outlined
-                style="margin: 0 10px;"
+                      v-model="name"
+                      :rules="[rules.required, rules.min]"
+                      :type="show1 ? 'text' : 'password'"
+                      name="name"
+                      :label="$t('formBlock.name')"
+                      hint="Введите Имя"
+                      outlined
+                      style="margin: 0 10px;"
               />
+              <!--<v-text-field-->
+                <!--v-model="name"-->
+                <!--:label="$t('formBlock.name')"-->
+                <!--name="name"-->
+                <!--outlined-->
+                <!--style="margin: 0 10px;"-->
+              <!--/>-->
               <v-text-field
                 v-model="email"
                 :label="$t('formBlock.mail')"
@@ -41,6 +51,7 @@
               />
             </div>
           </v-col>
+
           <v-col
             class="checkBlock"
             cols="12"
@@ -81,6 +92,16 @@ export default {
   name: "FormBlock",
   data() {
     return {
+      show1: false,
+      show2: true,
+      show3: false,
+      show4: false,
+      password: 'Password',
+      rules: {
+        required: value => !!value || 'Пусто.',
+        min: v => v.length >= 1 || ' ',
+        emailMatch: () => ('The email and password you entered don\'t match'),
+      },
       valid: false,
       name: "",
       phone: "",
