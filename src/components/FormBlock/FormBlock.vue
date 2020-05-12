@@ -19,6 +19,7 @@
           >
             <div class="fmodel">
               <v-text-field
+                      id="formname"
                       v-model="name"
                       :rules="[rules.required, rules.min]"
                       :type="show1 ? 'text' : 'password'"
@@ -36,16 +37,24 @@
                 <!--style="margin: 0 10px;"-->
               <!--/>-->
               <v-text-field
+                id="formemail"
                 v-model="email"
                 :label="$t('formBlock.mail')"
                 name="email"
+                :rules="[rules.required, rules.min]"
+                :type="show1 ? 'text' : 'password'"
+                hint="Введите Email"
                 outlined
                 style="margin: 0 10px;"
               />
               <v-text-field
+                id="formphone"
                 v-model="phone"
                 :label="$t('formBlock.phone')"
                 name="phone"
+                :rules="[rules.required, rules.min]"
+                :type="show1 ? 'text' : 'password'"
+                hint="Введите Телефон"
                 outlined
                 style="margin: 0 10px;"
               />
@@ -70,6 +79,7 @@
             </v-checkbox>
             <div class="d-flex align-center ">
               <v-btn
+                 id="formbutton"
                 class="border-radius: 12px;"
                 color="primaryColor"
                 dark
@@ -172,6 +182,39 @@ export default {
     }
   }
 };
+
+
+
+// function validateEmail(email) {
+//   var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//   return re.test(email);
+// }
+//
+// //form
+// $("#formbutton").click(function () {
+//   if (validateEmail($("#formemail").val()) === false || $("#formphone").val() === "") {
+//     if (validateEmail($("#formemail").val()) === true || $("#formphone").val().length >= 8) {
+//     }
+//     try {
+//     } catch (e) {
+//     }
+//     alert("Вы указали неверные контакты");
+//   } else {
+//
+//     try {
+//
+//     } catch (e) {
+//     }
+//     var infoText = "";
+//     infoText += ("Мы с вами свяжемся в ближайшее время") + "\n";
+//     alert(infoText);
+//     $("#formname").val("");
+//     $("#formemail").val("");
+//     $("#formphone").val("");
+//   }
+// });
+
+
 </script>
 
 <style lang="scss" scoped>
