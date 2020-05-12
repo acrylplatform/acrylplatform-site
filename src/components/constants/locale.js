@@ -92,6 +92,13 @@ export default{
         head2: "Меню",
         head3: "Контакты",
         head4: "Подписывайтесь на обновления",
+        rule: "ACRYL RUS, LLC.",
+        ruleworld: "Все материалы данного сайта являются объектами авторского\n" +
+            "                  права (в том числе дизайн). Запрещается копирование,\n" +
+            "                  распространение или любое иное использование материалов сайта\n" +
+            "                  без предварительного согласия правообладателя. Нарушение\n" +
+            "                  авторских прав может влечь гражданско-правовую,\n" +
+            "                  административную и/или уголовную ответственность.",
         iconItems: [
           {
             id: 1,
@@ -370,6 +377,8 @@ export default{
             head2: "Menu",
             head3: "Contacts",
             head4: "Subscribe",
+            rule: "ACRYL TECHNOLOGY LIMITED",
+            ruleworld: "All materials of this site are copyrighted (including design). Copying, distributing or any other use of site materials is prohibited without the prior consent of the copyright holder. Infringement of copyright can lead to civil, administrative or criminal responsibility.",
             iconItems: [
               {
                 id: 1,

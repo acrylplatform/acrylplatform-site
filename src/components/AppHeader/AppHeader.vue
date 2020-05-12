@@ -56,10 +56,11 @@
                 RU
               </a>
             </div>
-            <div class="d-flex align-center pr-3">
+            <div class="d-flex align-center pr-3" type="checkbox">
               <a
                 class="elHover"
                 @click="$emit('switchLang', 'en')"
+                onclick="underline"
               >
                 EN
               </a>
@@ -97,6 +98,10 @@ export default {
     }
   }
 };
+
+function underline() {
+  style.textDecoration = "underline";
+}
 </script>
 
 <style lang="scss" scope>
