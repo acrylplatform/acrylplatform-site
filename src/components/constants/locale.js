@@ -186,7 +186,7 @@ export default{
         },
         {
           id: 4,
-          text: "Blog",
+          text: "Блог",
           link: "https://medium.com/acrylplatform",
           target: "_blank",
           click: "Sublit_Blog1"
@@ -447,6 +447,8 @@ export default{
             number: "+7 (800) 511-37-15",
             numberLink: "+78005113715",
             email: "sales@acrylplatform.com",
+            support: "Support:",
+            support_email: "support@acrylplatform.com"
         },
         menuItems: [
             {
