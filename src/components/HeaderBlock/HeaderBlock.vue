@@ -14,9 +14,9 @@
                 <p class="headText">
                   {{ $t('header.head') }}
                 </p>
-                <p class="bodyText">
+                <h1 class="bodyText" style="font-style: normal; font-weight: 300; font-size: 14px; line-height: 17px; margin-bottom: 16px;">
                   {{ $t('header.bodyText') }}
-                </p>
+                </h1>
               </div>
               <v-btn
                 class="contentBtn"

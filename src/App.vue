@@ -159,11 +159,12 @@ export default {
           target: "_blank",
           click: "Sublit_Blog1"
         },
+
         // {id: 5, text: "Контакты", link: "#contacts", target: "_self", click: "Click_contact"}
       ],
       drawer: false,
       addressItems: {
-        city: "17/4, Fabrichnaya st. (12-13 fl.),",
+        city: ",",
         address: "Novosibirsk, 630007, Russia",
         number: "+7 (800) 511-37-15",
         numberLink: "+78005113715",

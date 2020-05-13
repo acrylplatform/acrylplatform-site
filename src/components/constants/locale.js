@@ -2,6 +2,11 @@ export default{
     ru:{
        lang: 'ru',
        drawer:{},
+        index:{
+           title: "ACRYL Platform | Блокчейн-платформа с открытым исходным кодом",
+            description: "ИТ-компания, разрабатывающая высокотехнологичные и простые в интеграции решения для задач бизнеса и предоставляющая место для записи коммерческих данных на условиях постоянной и прогнозируемой стоимости.",
+            keywords: "блокчейн, baas, хранение данных, цифровые активы, смарт контракты"
+        },
        header:{
            head:"ACRYL Platfotm",
            bodyText:"Блокчейн-платформа с открытым исходным кодом, разрабатывающая высокотехнологичные и простые в интеграции решения для задач бизнеса.",
@@ -37,7 +42,7 @@ export default{
           {id:23, header: "ГОСУДАРСТВЕННЫЕ РЕЕСТРЫ", text: "Основа для создания публичных реестров на основе блокчейн-технологии.", icon: "23"},
         ],
         column3: [
-          {id:31, header: "ПРОГРАММА ЛОЯЛЬНОСТИKROSS CARD", text: "Комплексное решение для запуска программы лояльности. Уникальный стек технологий Blockchain, AR, VR, AI, Big Data Analysis.", icon: "31"},
+          {id:31, header: "ПРОГРАММА ЛОЯЛЬНОСТИ KROSS CARD", text: "Комплексное решение для запуска программы лояльности. Уникальный стек технологий Blockchain, AR, VR, AI, Big Data Analysis.", icon: "31"},
           {id:32, header: "НАБЛЮДЕНИЕ И КОНТРОЛЬ", text: "Система мониторинга и контроля критических процессов компании: защита от краж и мошенничества.", icon: "32"},
           {id:33, header: "ГЕМБЛИНГ", text: "Технология блокчейн помогает повысить доверие к игровым сервисам и минимизировать мошенничество.", icon: "33"},
         ],
@@ -92,6 +97,13 @@ export default{
         head2: "Меню",
         head3: "Контакты",
         head4: "Подписывайтесь на обновления",
+        rule: "ACRYL RUS, LLC.",
+        ruleworld: "Все материалы данного сайта являются объектами авторского\n" +
+            "                  права (в том числе дизайн). Запрещается копирование,\n" +
+            "                  распространение или любое иное использование материалов сайта\n" +
+            "                  без предварительного согласия правообладателя. Нарушение\n" +
+            "                  авторских прав может влечь гражданско-правовую,\n" +
+            "                  административную и/или уголовную ответственность.",
         iconItems: [
           {
             id: 1,
@@ -134,8 +146,7 @@ export default{
         email: "Электронная почта",
         agreeCheckLabel: `
             Нажимая кнопку «Подписаться», я даю согласие на обработку своих персональных данных в соответствии с 
-            <a href="/privacy" style="color: #2EA9FB;">Политикой конфиденциальности</a>, а также
-            , а также соглашаюсь получать информацию о специальных предложениях на указанный e-mail и телефон.`,
+            <a href="/privacy" style="color: #2EA9FB;">Политикой конфиденциальности</a>, а также соглашаюсь получать информацию о специальных предложениях на указанный e-mail и телефон.`,
         rules: "Все права защищены, 18+",
         agreeCheck: false,
         modalTrue: false,
@@ -148,6 +159,8 @@ export default{
         number: "+7 (800) 511-37-15",
         numberLink: "+78005113715",
         email: "sales@acrylplatform.com",
+        support: "Поддержка:",
+        support_email: "support@acrylplatform.com"
        },
        menuItems: [
         {
@@ -173,7 +186,7 @@ export default{
         },
         {
           id: 4,
-          text: "Blog",
+          text: "Блог",
           link: "https://medium.com/acrylplatform",
           target: "_blank",
           click: "Sublit_Blog1"
@@ -278,6 +291,11 @@ export default{
     en:{
         lang: 'en',
         drawer:{},
+        index:{
+            title: "ACRYL Platform | Open-source blockchain platform",
+            description: "IT company, which develops high-tech and easy-to-integrate solutions for business needs and provides space for recording commercial data at a constant and predictable cost",
+            keywords: "blockchain, baas, data storage, digital assets, smart contacts"
+        },
         header:{
             head:"ACRYL Platfotm",
             bodyText:"Open-source blockchain platform that develops high-tech and easy-to-integrate solutions for business issues.",
@@ -369,6 +387,8 @@ export default{
             head2: "Menu",
             head3: "Contacts",
             head4: "Subscribe",
+            rule: "ACRYL TECHNOLOGY LIMITED",
+            ruleworld: "All materials of this site are copyrighted (including design). Copying, distributing or any other use of site materials is prohibited without the prior consent of the copyright holder. Infringement of copyright can lead to civil, administrative or criminal responsibility.",
             iconItems: [
               {
                 id: 1,
@@ -412,7 +432,7 @@ export default{
             agreeCheckLabel: `
               By clicking the "Subscribe" button I agree
               to the processing of my personal data in accordance with the
-              <a href="/privacy" style="color: #2EA9FB;">Privacy Policy</a>, а также
+              <a href="/privacy" style="color: #2EA9FB;">Privacy Policy</a>
               and to receive information about special
               offers on the specified e-mail and phone.`,
               rules: "All rights reserved, 18+",
@@ -427,6 +447,8 @@ export default{
             number: "+7 (800) 511-37-15",
             numberLink: "+78005113715",
             email: "sales@acrylplatform.com",
+            support: "Support:",
+            support_email: "support@acrylplatform.com"
         },
         menuItems: [
             {

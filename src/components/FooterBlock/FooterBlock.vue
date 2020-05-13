@@ -50,13 +50,13 @@
           <h4>{{ $t('footerBlock.head3') }}</h4>
           <div class="address">
             <p>
-              <b><a
+              <b style="font-weight: 500"><a
                 :href="`tel:${addressItems.numberLink}`"
                 @click="`${Submit_tel2()}`"
               >{{ addressItems.number }}</a></b>
             </p>
             <p>
-              <b><a
+              <b style="font-weight: 500"><a
                 :href="`mailto:${addressItems.email}`"
                 @click="`${Submit_EmailLetter()}`"
               >{{ addressItems.email }}</a></b>
@@ -71,10 +71,10 @@
               {{ addressItems.support }}
             </p>
             <p>
-              <b><a
-                :href="`mailto:${addressItems.emailsupport}`"
+              <b style="font-weight: 500"><a
+                :href="`mailto:${addressItems.support_email}`"
                 @click="`${Submit_EmailLetter()}`"
-              >{{ addressItems.emailsupport }}</a></b>
+              >{{ addressItems.support_email }}</a></b>
             </p>
           </div>
         </v-col>
@@ -173,7 +173,7 @@
           lg="3"
         >
           <div class="copyright">
-            <p>© 2020 - ACRYL RUS, LLC.</p>
+            <p>{{ $t('footerBlock.rule') }}</p>
             <div class="tooltip">
               <v-tooltip
                 top
@@ -188,12 +188,7 @@
                   >{{ $t('footerBlock.rules') }}</span>
                 </template>
                 <span>
-                  Все материалы данного сайта являются объектами авторского
-                  права (в том числе дизайн). Запрещается копирование,
-                  распространение или любое иное использование материалов сайта
-                  без предварительного согласия правообладателя. Нарушение
-                  авторских прав может влечь гражданско-правовую,
-                  административную и/или уголовную ответственность.
+                  {{ $t('footerBlock.ruleworld') }}
                 </span>
               </v-tooltip>
             </div>

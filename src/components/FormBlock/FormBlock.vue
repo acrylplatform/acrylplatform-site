@@ -19,28 +19,48 @@
           >
             <div class="fmodel">
               <v-text-field
-                v-model="name"
-                :label="$t('formBlock.name')"
-                name="name"
-                outlined
-                style="margin: 0 10px;"
+                      id="formname"
+                      v-model="name"
+                      :rules="[rules.required, rules.min]"
+                      :type="show1 ? 'text' : 'password'"
+                      name="name"
+                      :label="$t('formBlock.name')"
+                      hint="Введите Имя"
+                      outlined
+                      style="margin: 0 10px;"
               />
+              <!--<v-text-field-->
+                <!--v-model="name"-->
+                <!--:label="$t('formBlock.name')"-->
+                <!--name="name"-->
+                <!--outlined-->
+                <!--style="margin: 0 10px;"-->
+              <!--/>-->
               <v-text-field
+                id="formemail"
                 v-model="email"
                 :label="$t('formBlock.mail')"
                 name="email"
+                :rules="[rules.required, rules.min]"
+                :type="show1 ? 'text' : 'password'"
+                hint="Введите Email"
                 outlined
                 style="margin: 0 10px;"
               />
               <v-text-field
+                id="formphone"
                 v-model="phone"
                 :label="$t('formBlock.phone')"
                 name="phone"
+                :rules="[rules.required, rules.min]"
+                :type="show1 ? 'text' : 'password'"
+                hint="Введите Телефон"
                 outlined
                 style="margin: 0 10px;"
               />
             </div>
           </v-col>
+
           <v-col
             class="checkBlock"
             cols="12"
@@ -59,6 +79,7 @@
             </v-checkbox>
             <div class="d-flex align-center ">
               <v-btn
+                 id="formbutton"
                 class="border-radius: 12px;"
                 color="primaryColor"
                 dark
@@ -81,6 +102,16 @@ export default {
   name: "FormBlock",
   data() {
     return {
+      show1: false,
+      show2: true,
+      show3: false,
+      show4: false,
+      password: 'Password',
+      rules: {
+        required: value => !!value || 'Пусто.',
+        min: v => v.length >= 1 || ' ',
+        emailMatch: () => ('The email and password you entered don\'t match'),
+      },
       valid: false,
       name: "",
       phone: "",
@@ -151,6 +182,39 @@ export default {
     }
   }
 };
+
+
+
+// function validateEmail(email) {
+//   var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//   return re.test(email);
+// }
+//
+// //form
+// $("#formbutton").click(function () {
+//   if (validateEmail($("#formemail").val()) === false || $("#formphone").val() === "") {
+//     if (validateEmail($("#formemail").val()) === true || $("#formphone").val().length >= 8) {
+//     }
+//     try {
+//     } catch (e) {
+//     }
+//     alert("Вы указали неверные контакты");
+//   } else {
+//
+//     try {
+//
+//     } catch (e) {
+//     }
+//     var infoText = "";
+//     infoText += ("Мы с вами свяжемся в ближайшее время") + "\n";
+//     alert(infoText);
+//     $("#formname").val("");
+//     $("#formemail").val("");
+//     $("#formphone").val("");
+//   }
+// });
+
+
 </script>
 
 <style lang="scss" scoped>
