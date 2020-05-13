@@ -9,7 +9,8 @@
     <meta name="msapplication-TileColor" content="#000000">
     <meta name="msapplication-TileImage" content="icons/mstile-144x144.png">
     <meta name="theme-color" content="#000000">
-    <meta name="Description" content="Acryl современная блокчейн платформа.">
+    <meta name="Description" content="{{ $t('index.description') }}">
+    <meta name="keywords" content="{{ $t('index.keywords') }}">
 
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>ACRYL</title>
@@ -19,6 +20,7 @@
     <style>
       html { scroll-behavior: smooth;}
     </style>
+    <title>{{ $t('index.title') }}</title>
   </head>
   <body>
     <noscript>
