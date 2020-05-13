@@ -2,6 +2,11 @@ export default{
     ru:{
        lang: 'ru',
        drawer:{},
+        index:{
+           title: "ACRYL Platform | Блокчейн-платформа с открытым исходным кодом",
+            description: "ИТ-компания, разрабатывающая высокотехнологичные и простые в интеграции решения для задач бизнеса и предоставляющая место для записи коммерческих данных на условиях постоянной и прогнозируемой стоимости.",
+            keywords: "блокчейн, baas, хранение данных, цифровые активы, смарт контракты"
+        },
        header:{
            head:"ACRYL Platfotm",
            bodyText:"Блокчейн-платформа с открытым исходным кодом, разрабатывающая высокотехнологичные и простые в интеграции решения для задач бизнеса.",
@@ -286,6 +291,11 @@ export default{
     en:{
         lang: 'en',
         drawer:{},
+        index:{
+            title: "ACRYL Platform | Open-source blockchain platform",
+            description: "IT company, which develops high-tech and easy-to-integrate solutions for business needs and provides space for recording commercial data at a constant and predictable cost",
+            keywords: "blockchain, baas, data storage, digital assets, smart contacts"
+        },
         header:{
             head:"ACRYL Platfotm",
             bodyText:"Open-source blockchain platform that develops high-tech and easy-to-integrate solutions for business issues.",
