@@ -1,4 +1,4 @@
-# Arborplatform
+# Acrylplatform
 
 ## Project setup
 ```
